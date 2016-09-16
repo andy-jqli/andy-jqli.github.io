@@ -44,7 +44,7 @@
 				<h1 class="site-name"><a href="/" title="andy">andy</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -60,7 +60,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -78,505 +78,6 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/09/15/postgres-dblink/" title="postgres--dblink" itemprop="url">postgres--dblink</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-15T10:14:43.000Z" itemprop="datePublished"> 发表于 2016-09-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>准备工作:创建dblink扩展：create extension dblink;</p>
-<blockquote>
-<ul>
-<li><strong>dblink_connect</strong></li>
-</ul>
-</blockquote>
-<p>这个命令主要作用是建立一个到远程数据库的连接，比如</p>
-<p>select dblink_connect(‘myconn’, ‘host=XXX.XXX.XXX.XXX port=XX dbname=postgres user=myname password=mypassword’);<br>myconn表示连接名称，可以不写，不过建议还是写下连接名称。</p>
-<blockquote>
-<ul>
-<li><strong>dblink_disconnect</strong></li>
-</ul>
-</blockquote>
-<p>断开远程数据库连接，比如</p>
-<p>select dblink_disconnect(‘myconn’) ;</p>
-<blockquote>
-<ul>
-<li><strong>dblink</strong></li>
-</ul>
-</blockquote>
-<p>这个命令意思就是执行一个远程的查询。如果远程连接成功，那么就可以在本地操作远程数据库了。</p>
-<p>select <em> from dblink(‘myconn’,’select </em> from mytable’) as t(a int, b text, c text[]) </p>
-<p>（注:远程数据库的表结构发生改变时，则需要重新执行此操作）</p>
-<blockquote>
-<ul>
-<li><strong>dblink_error_message</strong></li>
-</ul>
-</blockquote>
-<p>得到最后出现错误的信息提示。select dblink_error_message(‘myconn’);</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/数据库/">数据库</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/postgresql-dblink/">postgresql dblink</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/15/Android-离线打包/" title="Android 离线打包" itemprop="url">Android 离线打包</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-15T10:14:05.000Z" itemprop="datePublished"> 发表于 2016-09-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/15/netbeans-常用快捷键/" title="netbeans 常用快捷键" itemprop="url">netbeans 常用快捷键</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-15T10:13:36.000Z" itemprop="datePublished"> 发表于 2016-09-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <blockquote>
-<ul>
-<li>删除一行代码: CTRL+C</li>
-<li>自动修复导入包：Ctrl-Shift-I</li>
-<li>自动格式化代码：Alt-Shift-F </li>
-<li>向上或者向下复制：Ctrl+Shift+Up/Down</li>
-<li>向上或者向下移动：Alt+Shift+Up/Down</li>
-</ul>
-</blockquote>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/开发工具/">开发工具</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/快捷键-Netbeans/">快捷键 Netbeans</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/15/centos-常用命令集锦/" title="centos 常用命令集锦" itemprop="url">centos 常用命令集锦</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-15T10:12:54.000Z" itemprop="datePublished"> 发表于 2016-09-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/15/Sprint-boot-学习笔记/" title="Sprint boot 学习笔记" itemprop="url">Sprint boot 学习笔记</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-15T10:11:02.000Z" itemprop="datePublished"> 发表于 2016-09-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/15/ant学习笔记/" title="ant学习笔记" itemprop="url">ant学习笔记</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-15T10:10:35.000Z" itemprop="datePublished"> 发表于 2016-09-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/15/maven相关知识/" title="maven相关知识" itemprop="url">maven相关知识</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-15T10:10:14.000Z" itemprop="datePublished"> 发表于 2016-09-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/15/postgresql/" title="postgresql" itemprop="url">postgresql</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-15T10:09:38.000Z" itemprop="datePublished"> 发表于 2016-09-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/15/angularjs学习笔记/" title="angularjs学习笔记" itemprop="url">angularjs学习笔记</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-15T10:07:52.000Z" itemprop="datePublished"> 发表于 2016-09-15</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
       <a href="/2016/09/15/mui学习笔记/" title="mui学习笔记" itemprop="url">mui学习笔记</a>
   </h1>
   <p class="article-author">By
@@ -584,7 +85,7 @@
 		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-15T07:41:37.000Z" itemprop="datePublished"> 发表于 2016-09-15</time>
+    <time datetime="2016-09-15T07:41:37.000Z" itemprop="datePublished"> Published 2016-09-15</time>
     
   </p>
 </header>
@@ -637,16 +138,237 @@
 
 
 
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/09/15/git命令学习笔记/" title="git命令学习笔记" itemprop="url">git命令学习笔记</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-15T07:34:04.000Z" itemprop="datePublished"> Published 2016-09-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>ssh -T git@github.roamdata.com</p>
+<p>//add or remove remote repositary<br>git remote -v<br>git remote remove origin<br>git remote remove upstream<br>git remote add origin git@github.roamdata.com:fli/ROAMSupport.git<br>git remote add upstream git@github.roamdata.com:RoamDataCorp/ROAMSupport.git<br>//view sb’s git<br>git remote add <somebody> <somebody's git="">
+git remote rm <somebody> <somebody's git=""><br>//update url<br>git remote set-url origin <a href="https://[joey.tang]@stash.roamdata.com/scm/~joey.tang/roamsupport.git" target="_blank" rel="external">https://[joey.tang]@stash.roamdata.com/scm/~joey.tang/roamsupport.git</a><br>git remote set-url upstream <a href="https://[joey.tang]@stash.roamdata.com/scm/mcm/roamsupport.git" target="_blank" rel="external">https://[joey.tang]@stash.roamdata.com/scm/mcm/roamsupport.git</a></somebody's></somebody></somebody's></somebody></p>
+<p>//clone<br>git clone git@github.roamdata.com:fli/TSP_Goodies.git</p>
+<p>git branch develop<br>git checkout master<br>git checkout develop<br>git branch -v //to see all the branch</p>
+<p>//add a new branch<br>git branch feature1<br>check out feature1<br>commit feature1<br>push origin feature1</p>
+<p>//删除本地分支<br>git branch -d feature1<br>git branch -D feature1<br>//删除远程分支<br>git push origin –delete feature1</p>
+<p>git checkout filepath</p>
+<p>git checkout -b temp</p>
+<p>//update repositary<br>git remote update<br>git pull upstream develop<br>git pull upstream master</p>
+<p>//push local code to remote repositary<br>commit files<br>git push origin develop</p>
+<p>//how to commit files<br>git status<br>git add *.jsp<br>git commit -m “MCMV-3186 remove redundan Account string”</p>
+<p>git commit –amend -m “msg” //修改上一次的提交信息<br>git commit –amend  //修改上一次提交的内容</p>
+<p>//git add 的撤销操作<br>git reset HEAD file</p>
+<p>//how to amend the commit message<br>git rebase -i HEAD~4<br>change the key pick to r //reword which means use the commit, but amend commit message<br>force push to origin</p>
+<p>//保留本地文件，更新最新代码<br>git stash<br>pull upstream<br>git stash pop</p>
+<p>//view repositary history<br>gitk –all&amp;</p>
+<p>//see file history<br>gitk path to file<br>git blame filepath</p>
+<p>//view command history and exit command prompt<br>history<br>exit</p>
+<p>//merge<br>git pull upstream develop<br>git push origin develop<br>git push origin develop -f  //<br>git push upstrean devlop  -f  //不允许</p>
+<p>//how to make alias, so you can use a short command<br>cd ~/<br>vim .bash_profile<br>alias sshdev02=’ssh -i ~/.ssh/DEV02_20140926 ec2-user@54.250.7.5’</p>
+<p>//db<br>ssh -i ~/.ssh/DEV02_20140926 ec2-user@54.250.7.5<br>psql -h 54.250.7.5 -U postgres<br>\q<br>cd /opt/tsp<br>sudo -s<br>bin/tspinit tspadmin R0amdata ROAMDATA</p>
+<p>//log<br>cd /opt/tsp/inst/default/log/<br>tail -f server.log</p>
+<p>//push to upstream</p>
+<ol>
+<li>reset back to latest upstream</li>
+<li>cherry-pick origin commit</li>
+<li>push upstream</li>
+<li>push origin force</li>
+</ol>
+<p>//revert</p>
+<ol>
+<li>update</li>
+<li>reset top upstream</li>
+<li>revert</li>
+<li>push origin</li>
+<li>push upstream</li>
+</ol>
+<p>//origin多次提交后，再提交到upstream  ??<br>mixed reset</p>
+<p>//to remove a tag and update tags:<br>git tag -d 5.4.RC4.1       (to remove the tag locally)<br>git push origin :refs/tags/5.4.RC4.1    (to push the removal to origin)<br>  (replace “origin” with your personal remote repository name if necessary)<br>git remote update</p>
+<p>//my squash which succeed<br>add a new branch<br>checkout the new branch<br>cherry pick several pushes which need to squah on other branch<br>git reset –soft HEAD~3  //change 3 to the number of cherry-picks<br>git commit -m ‘new commit message’</p>
+<p>//Git Squash<br>REF: <a href="http://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git/5201642#5201642" target="_blank" rel="external">http://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git/5201642#5201642</a></p>
+<h1 id="Reset-the-current-branch-to-the-commit-just-before-the-last-12"><a href="#Reset-the-current-branch-to-the-commit-just-before-the-last-12" class="headerlink" title="Reset the current branch to the commit just before the last 12:"></a>Reset the current branch to the commit just before the last 12:</h1><p>git reset –hard HEAD~12</p>
+<h1 id="HEAD-1-is-where-the-branch-was-just-before-the-previous-command"><a href="#HEAD-1-is-where-the-branch-was-just-before-the-previous-command" class="headerlink" title="HEAD@{1} is where the branch was just before the previous command."></a>HEAD@{1} is where the branch was just before the previous command.</h1><h1 id="This-command-sets-the-state-of-the-index-to-be-as-it-would-just"><a href="#This-command-sets-the-state-of-the-index-to-be-as-it-would-just" class="headerlink" title="This command sets the state of the index to be as it would just"></a>This command sets the state of the index to be as it would just</h1><h1 id="after-a-merge-from-that-commit"><a href="#after-a-merge-from-that-commit" class="headerlink" title="after a merge from that commit:"></a>after a merge from that commit:</h1><p>git merge –squash HEAD@{1}</p>
+<h1 id="Commit-those-squashed-changes-The-commit-message-will-be-helpfully"><a href="#Commit-those-squashed-changes-The-commit-message-will-be-helpfully" class="headerlink" title="Commit those squashed changes.  The commit message will be helpfully"></a>Commit those squashed changes.  The commit message will be helpfully</h1><h1 id="prepopulated-with-the-commit-messages-of-all-the-squashed-commits"><a href="#prepopulated-with-the-commit-messages-of-all-the-squashed-commits" class="headerlink" title="prepopulated with the commit messages of all the squashed commits:"></a>prepopulated with the commit messages of all the squashed commits:</h1><p>git commit</p>
+<p>$ git commit -m “MCMV-3750 Fix the bug that Submerchant navigation title is not<br> correct” -c “This issue is caused by lacking isSubMerchant judgement when disp<br>lay the navigation title of audit page and roammerchant page “<br>fatal: Option -m cannot be combined with -c/-C/-F/–fixup.</p>
 
-  <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
-  </nav>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/版本控制/">版本控制</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/git命令/">git命令</a>
+  </div>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/09/15/app离线本地存储方案--Web SQL/" title="app离线本地存储方案--Web SQL" itemprop="url">app离线本地存储方案--Web SQL</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-15T06:26:09.000Z" itemprop="datePublished"> Published 2016-09-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>websql<br>是手机端关系型数据库的最佳方案，各种手机都支持。只是该标准不再更新。但是目前手机端重量数据存储的唯一可商用方案。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">html</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"> </span></div><div class="line"> var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);  </div><div class="line"> var msg;  </div><div class="line"> db.transaction(function (tx) &#123; </div><div class="line">   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');  </div><div class="line">   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")');  </div><div class="line">   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")');  </div><div class="line">   msg = '&lt;p&gt;Log message created and row inserted.&lt;/p&gt;';  </div><div class="line">   document.querySelector('#status').innerHTML =  msg;  </div><div class="line"> &#125;);  </div><div class="line">  </div><div class="line"> db.transaction(function (tx) &#123; </div><div class="line">   tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) &#123; </div><div class="line">    var len = results.rows.length, i;  </div><div class="line">    msg = "&lt;p&gt;Found rows: " + len + "&lt;/p&gt;";  </div><div class="line">    document.querySelector('#status').innerHTML +=  msg;  </div><div class="line">    for (i = 0; i &lt; len; i++)&#123; </div><div class="line">      msg = "&lt;p&gt;&lt;b&gt;" + results.rows.item(i).log + "&lt;/b&gt;&lt;/p&gt;";  </div><div class="line">      document.querySelector('#status').innerHTML +=  msg;  </div><div class="line">    &#125; </div><div class="line">  &#125;, null);  </div><div class="line"> &#125;);  </div><div class="line"> <span class="tag">&lt;/<span class="name">script</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"status"</span> <span class="attr">name</span>=<span class="string">"status"</span>&gt;</span>Status Message<span class="tag">&lt;/<span class="name">div</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/前端技术/">前端技术</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/app离线缓存-Web-SQL/">app离线缓存 Web-SQL</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/09/15/app离线本地存储方案--indexedDB/" title="app离线本地存储方案--indexedDB" itemprop="url">app离线本地存储方案--indexedDB</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-15T01:37:00.000Z" itemprop="datePublished"> Published 2016-09-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="indexedDB"><a href="#indexedDB" class="headerlink" title="indexedDB"></a>indexedDB</h2><p>是HTML5里最新的数据存储规范，但不是基于SQL，而是基于对象。<br>indexedDB性能更高，全是异步处理，学习难度偏大。最重要的是目前手机端支持度不行。Android4.4以上和iOS8以上才支持indexedDB。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>IndexedDB<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="xml"></span></div><div class="line">        function openDB (name,version) &#123;</div><div class="line">            var version=version || 1;</div><div class="line">            var request=window.indexedDB.open(name,version);</div><div class="line">            request.onerror=function(e)&#123;</div><div class="line">                console.log(e.currentTarget.error.message);</div><div class="line">            &#125;;</div><div class="line">            request.onsuccess=function(e)&#123;</div><div class="line">                myDB.db=e.target.result;</div><div class="line">            &#125;;</div><div class="line">            request.onupgradeneeded=function(e)&#123;</div><div class="line">                var db=e.target.result;</div><div class="line">                if(!db.objectStoreNames.contains('students'))&#123;</div><div class="line">                    var store=db.createObjectStore('students',&#123;keyPath: 'id'&#125;);</div><div class="line">                    store.createIndex('nameIndex','name',&#123;unique:true&#125;); </div><div class="line">                    store.createIndex('ageIndex','age',&#123;unique:false&#125;); </div><div class="line">                &#125;</div><div class="line">                console.log('DB version changed to '+version);</div><div class="line">            &#125;;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        function closeDB(db)&#123;</div><div class="line">            db.close();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        function deleteDB(name)&#123;</div><div class="line">            indexedDB.deleteDatabase(name);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        function addData(db,storeName)&#123;</div><div class="line">            var transaction=db.transaction(storeName,'readwrite'); </div><div class="line">            var store=transaction.objectStore(storeName); </div><div class="line"></div><div class="line">            for(var i=0;i<span class="tag">&lt;<span class="name">students.length;i++)&#123;</span></span></div><div class="line">                <span class="attr">store.add</span>(<span class="attr">students</span>[<span class="attr">i</span>]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="attr">function</span> <span class="attr">getDataByKey</span>(<span class="attr">db</span>,<span class="attr">storeName</span>,<span class="attr">value</span>)&#123;</div><div class="line">            <span class="attr">var</span> <span class="attr">transaction</span>=<span class="string">db.transaction(storeName,</span>'<span class="attr">readwrite</span>'); </div><div class="line">            <span class="attr">var</span> <span class="attr">store</span>=<span class="string">transaction.objectStore(storeName);</span> </div><div class="line">            <span class="attr">var</span> <span class="attr">request</span>=<span class="string">store.get(value);</span> </div><div class="line">            <span class="attr">request.onsuccess</span>=<span class="string">function(e)&#123;</span> </div><div class="line">                <span class="attr">var</span> <span class="attr">student</span>=<span class="string">e.target.result;</span> </div><div class="line">                <span class="attr">console.log</span>(<span class="attr">student.name</span>); </div><div class="line">            &#125;;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="attr">function</span> <span class="attr">updateDataByKey</span>(<span class="attr">db</span>,<span class="attr">storeName</span>,<span class="attr">value</span>)&#123;</div><div class="line">            <span class="attr">var</span> <span class="attr">transaction</span>=<span class="string">db.transaction(storeName,</span>'<span class="attr">readwrite</span>'); </div><div class="line">            <span class="attr">var</span> <span class="attr">store</span>=<span class="string">transaction.objectStore(storeName);</span> </div><div class="line">            <span class="attr">var</span> <span class="attr">request</span>=<span class="string">store.get(value);</span> </div><div class="line">            <span class="attr">request.onsuccess</span>=<span class="string">function(e)&#123;</span> </div><div class="line">                <span class="attr">var</span> <span class="attr">student</span>=<span class="string">e.target.result;</span> </div><div class="line">                <span class="attr">student.age</span>=<span class="string">35;</span></div><div class="line">                <span class="attr">store.put</span>(<span class="attr">student</span>); </div><div class="line">            &#125;;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="attr">function</span> <span class="attr">deleteDataByKey</span>(<span class="attr">db</span>,<span class="attr">storeName</span>,<span class="attr">value</span>)&#123;</div><div class="line">            <span class="attr">var</span> <span class="attr">transaction</span>=<span class="string">db.transaction(storeName,</span>'<span class="attr">readwrite</span>'); </div><div class="line">            <span class="attr">var</span> <span class="attr">store</span>=<span class="string">transaction.objectStore(storeName);</span> </div><div class="line">            <span class="attr">store.delete</span>(<span class="attr">value</span>); </div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="attr">function</span> <span class="attr">clearObjectStore</span>(<span class="attr">db</span>,<span class="attr">storeName</span>)&#123;</div><div class="line">            <span class="attr">var</span> <span class="attr">transaction</span>=<span class="string">db.transaction(storeName,</span>'<span class="attr">readwrite</span>'); </div><div class="line">            <span class="attr">var</span> <span class="attr">store</span>=<span class="string">transaction.objectStore(storeName);</span> </div><div class="line">            <span class="attr">store.clear</span>();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="attr">function</span> <span class="attr">deleteObjectStore</span>(<span class="attr">db</span>,<span class="attr">storeName</span>)&#123;</div><div class="line">            <span class="attr">var</span> <span class="attr">transaction</span>=<span class="string">db.transaction(storeName,</span>'<span class="attr">versionchange</span>'); </div><div class="line">            <span class="attr">db.deleteObjectStore</span>(<span class="attr">storeName</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="attr">function</span> <span class="attr">fetchStoreByCursor</span>(<span class="attr">db</span>,<span class="attr">storeName</span>)&#123;</div><div class="line">            <span class="attr">var</span> <span class="attr">transaction</span>=<span class="string">db.transaction(storeName);</span></div><div class="line">            <span class="attr">var</span> <span class="attr">store</span>=<span class="string">transaction.objectStore(storeName);</span></div><div class="line">            <span class="attr">var</span> <span class="attr">request</span>=<span class="string">store.openCursor();</span></div><div class="line">            <span class="attr">request.onsuccess</span>=<span class="string">function(e)&#123;</span></div><div class="line">                <span class="attr">var</span> <span class="attr">cursor</span>=<span class="string">e.target.result;</span></div><div class="line">                <span class="attr">if</span>(<span class="attr">cursor</span>)&#123;</div><div class="line">                    <span class="attr">console.log</span>(<span class="attr">cursor.key</span>);</div><div class="line">                    <span class="attr">var</span> <span class="attr">currentStudent</span>=<span class="string">cursor.value;</span></div><div class="line">                    <span class="attr">console.log</span>(<span class="attr">currentStudent.name</span>);</div><div class="line">                    <span class="attr">cursor.continue</span>();</div><div class="line">                &#125;</div><div class="line">            &#125;;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="attr">function</span> <span class="attr">getDataByIndex</span>(<span class="attr">db</span>,<span class="attr">storeName</span>)&#123;</div><div class="line">            <span class="attr">var</span> <span class="attr">transaction</span>=<span class="string">db.transaction(storeName);</span></div><div class="line">            <span class="attr">var</span> <span class="attr">store</span>=<span class="string">transaction.objectStore(storeName);</span></div><div class="line">            <span class="attr">var</span> <span class="attr">index</span> = <span class="string">store.index(</span>"<span class="attr">ageIndex</span>");</div><div class="line">            <span class="attr">index.get</span>(<span class="attr">26</span>)<span class="attr">.onsuccess</span>=<span class="string">function(e)&#123;</span></div><div class="line">                <span class="attr">var</span> <span class="attr">student</span>=<span class="string">e.target.result;</span></div><div class="line">                <span class="attr">console.log</span>(<span class="attr">student.id</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="attr">function</span> <span class="attr">getMultipleData</span>(<span class="attr">db</span>,<span class="attr">storeName</span>)&#123;</div><div class="line">            <span class="attr">var</span> <span class="attr">transaction</span>=<span class="string">db.transaction(storeName);</span></div><div class="line">            <span class="attr">var</span> <span class="attr">store</span>=<span class="string">transaction.objectStore(storeName);</span></div><div class="line">            <span class="attr">var</span> <span class="attr">index</span> = <span class="string">store.index(</span>"<span class="attr">nameIndex</span>");</div><div class="line">            <span class="attr">var</span> <span class="attr">request</span>=<span class="string">index.openCursor(null,IDBCursor.prev);</span></div><div class="line">            <span class="attr">request.onsuccess</span>=<span class="string">function(e)&#123;</span></div><div class="line">                <span class="attr">var</span> <span class="attr">cursor</span>=<span class="string">e.target.result;</span></div><div class="line">                <span class="attr">if</span>(<span class="attr">cursor</span>)&#123;</div><div class="line">                    <span class="attr">var</span> <span class="attr">student</span>=<span class="string">cursor.value;</span></div><div class="line">                    <span class="attr">console.log</span>(<span class="attr">student.name</span>);</div><div class="line">                    <span class="attr">cursor.continue</span>();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="attr">var</span> <span class="attr">myDB</span>=<span class="string">&#123;</span></div><div class="line">            <span class="attr">name:</span>'<span class="attr">test</span>',</div><div class="line">            <span class="attr">version:1</span>,</div><div class="line">            <span class="attr">db:null</span></div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="attr">var</span> <span class="attr">students</span>=<span class="string">[&#123;</span> </div><div class="line">            <span class="attr">id:1001</span>, </div><div class="line">            <span class="attr">name:</span>"<span class="attr">Byron</span>", </div><div class="line">            <span class="attr">age:24</span> </div><div class="line">        &#125;,&#123; </div><div class="line">            <span class="attr">id:1002</span>, </div><div class="line">            <span class="attr">name:</span>"<span class="attr">Frank</span>", </div><div class="line">            <span class="attr">age:30</span> </div><div class="line">        &#125;,&#123; </div><div class="line">            <span class="attr">id:1003</span>, </div><div class="line">            <span class="attr">name:</span>"<span class="attr">Aaron</span>", </div><div class="line">            <span class="attr">age:26</span> </div><div class="line">        &#125;,&#123; </div><div class="line">            <span class="attr">id:1004</span>, </div><div class="line">            <span class="attr">name:</span>"<span class="attr">Casper</span>", </div><div class="line">            <span class="attr">age:26</span> </div><div class="line">        &#125;];</div><div class="line">        </div><div class="line">        </div><div class="line">        //调用</div><div class="line">        <span class="attr">openDB</span>(<span class="attr">myDB.name</span>,<span class="attr">myDB.version</span>);</div><div class="line">        <span class="attr">setTimeout</span>(<span class="attr">function</span>()&#123;</div><div class="line">            <span class="attr">addData</span>(<span class="attr">myDB.db</span>,'<span class="attr">students</span>');</div><div class="line">        &#125;,<span class="attr">1000</span>);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/前端技术/">前端技术</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/app离线缓存-indexedDB/">app离线缓存 indexedDB</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -654,7 +376,7 @@
 
   
 <div class="categorieslist">
-	<p class="asidetitle">分类</p>
+	<p class="asidetitle">Categories</p>
 		<ul>
 		
 		  
@@ -662,11 +384,7 @@
 		  
 		
 		  
-			<li><a href="/categories/开发工具/" title="开发工具">开发工具<sup>1</sup></a></li>
-		  
 		
-		  
-			<li><a href="/categories/数据库/" title="数据库">数据库<sup>1</sup></a></li>
 		  
 		
 		  
@@ -679,7 +397,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -699,11 +417,7 @@
 			
 		
 			
-				<li><a href="/tags/postgresql-dblink/" title="postgresql dblink">postgresql dblink<sup>1</sup></a></li>
-			
 		
-			
-				<li><a href="/tags/快捷键-Netbeans/" title="快捷键 Netbeans">快捷键 Netbeans<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -711,7 +425,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -733,11 +447,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
 </div>
 
@@ -887,7 +601,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
