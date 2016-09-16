@@ -4,26 +4,20 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>app离线本地存储方案--Web SQL | andy</title>
+    <title>ant学习笔记 | andy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="andy">
     
 
     
-    <meta name="description" content="websql是手机端关系型数据库的最佳方案，各种手机都支持。只是该标准不再更新。但是目前手机端重量数据存储的唯一可商用方案。
-12345678910111213141516171819202122232425262728293031&amp;lt;!DOCTYPE HTML&amp;gt;  &amp;lt;html&amp;gt;  &amp;lt;head&amp;gt;  &amp;lt;script type=&quot;text/javascript&quot;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="app离线本地存储方案--Web SQL">
-<meta property="og:url" content="http://yoursite.com/2016/09/15/app离线本地存储方案--Web SQL/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="ant学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/09/15/ant学习笔记/index.html">
 <meta property="og:site_name" content="andy">
-<meta property="og:description" content="websql是手机端关系型数据库的最佳方案，各种手机都支持。只是该标准不再更新。但是目前手机端重量数据存储的唯一可商用方案。
-12345678910111213141516171819202122232425262728293031&amp;lt;!DOCTYPE HTML&amp;gt;  &amp;lt;html&amp;gt;  &amp;lt;head&amp;gt;  &amp;lt;script type=&quot;text/javascript&quot;">
-<meta property="og:updated_time" content="2016-09-15T06:46:22.984Z">
+<meta property="og:updated_time" content="2016-09-15T10:10:35.566Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="app离线本地存储方案--Web SQL">
-<meta name="twitter:description" content="websql是手机端关系型数据库的最佳方案，各种手机都支持。只是该标准不再更新。但是目前手机端重量数据存储的唯一可商用方案。
-12345678910111213141516171819202122232425262728293031&amp;lt;!DOCTYPE HTML&amp;gt;  &amp;lt;html&amp;gt;  &amp;lt;head&amp;gt;  &amp;lt;script type=&quot;text/javascript&quot;">
+<meta name="twitter:title" content="ant学习笔记">
 
     
     <link rel="alternative" href="/atom.xml" title="andy" type="application/atom+xml">
@@ -83,14 +77,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/09/15/app离线本地存储方案--Web SQL/" title="app离线本地存储方案--Web SQL" itemprop="url">app离线本地存储方案--Web SQL</a>
+      <a href="/2016/09/15/ant学习笔记/" title="ant学习笔记" itemprop="url">ant学习笔记</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="andy" target="_blank" itemprop="author">andy</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-15T06:26:09.000Z" itemprop="datePublished"> Published 2016-09-15</time>
+    <time datetime="2016-09-15T10:10:35.000Z" itemprop="datePublished"> Published 2016-09-15</time>
     
   </p>
 </header>
@@ -103,22 +97,11 @@
 		
 		</div>
 		
-		<p>websql<br>是手机端关系型数据库的最佳方案，各种手机都支持。只是该标准不再更新。但是目前手机端重量数据存储的唯一可商用方案。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">html</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"> </span></div><div class="line"> var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);  </div><div class="line"> var msg;  </div><div class="line"> db.transaction(function (tx) &#123; </div><div class="line">   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');  </div><div class="line">   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")');  </div><div class="line">   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")');  </div><div class="line">   msg = '&lt;p&gt;Log message created and row inserted.&lt;/p&gt;';  </div><div class="line">   document.querySelector('#status').innerHTML =  msg;  </div><div class="line"> &#125;);  </div><div class="line">  </div><div class="line"> db.transaction(function (tx) &#123; </div><div class="line">   tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) &#123; </div><div class="line">    var len = results.rows.length, i;  </div><div class="line">    msg = "&lt;p&gt;Found rows: " + len + "&lt;/p&gt;";  </div><div class="line">    document.querySelector('#status').innerHTML +=  msg;  </div><div class="line">    for (i = 0; i &lt; len; i++)&#123; </div><div class="line">      msg = "&lt;p&gt;&lt;b&gt;" + results.rows.item(i).log + "&lt;/b&gt;&lt;/p&gt;";  </div><div class="line">      document.querySelector('#status').innerHTML +=  msg;  </div><div class="line">    &#125; </div><div class="line">  &#125;, null);  </div><div class="line"> &#125;);  </div><div class="line"> <span class="tag">&lt;/<span class="name">script</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"status"</span> <span class="attr">name</span>=<span class="string">"status"</span>&gt;</span>Status Message<span class="tag">&lt;/<span class="name">div</span>&gt;</span> </div><div class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>  
+		  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/前端技术/">前端技术</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/app离线缓存-Web-SQL/">app离线缓存 Web-SQL</a>
-  </div>
 
 </div>
 
@@ -126,7 +109,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/09/15/app离线本地存储方案--Web SQL/" data-title="app离线本地存储方案--Web SQL | andy" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/09/15/ant学习笔记/" data-title="ant学习笔记 | andy" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -140,18 +123,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/09/15/hexo学习笔记/" title="hexo学习笔记">
+ <a href="/2016/09/15/Sprint-boot-学习笔记/" title="Sprint boot 学习笔记">
   <strong>上一篇：</strong><br/>
   <span>
-  hexo学习笔记</span>
+  Sprint boot 学习笔记</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/09/15/app离线本地存储方案--indexedDB/"  title="app离线本地存储方案--indexedDB">
+<a href="/2016/09/15/maven相关知识/"  title="maven相关知识">
  <strong>下一篇：</strong><br/> 
- <span>app离线本地存储方案--indexedDB
+ <span>maven相关知识
 </span>
 </a>
 </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-15T10:03:33.099Z</updated>
+  <updated>2016-09-16T03:26:25.524Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,198 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>postgres--dblink</title>
+    <link href="http://yoursite.com/2016/09/15/postgres-dblink/"/>
+    <id>http://yoursite.com/2016/09/15/postgres-dblink/</id>
+    <published>2016-09-15T10:14:43.000Z</published>
+    <updated>2016-09-16T03:26:25.524Z</updated>
+    
+    <content type="html"><![CDATA[<p>准备工作:创建dblink扩展：create extension dblink;</p>
+<blockquote>
+<ul>
+<li><strong>dblink_connect</strong></li>
+</ul>
+</blockquote>
+<p>这个命令主要作用是建立一个到远程数据库的连接，比如</p>
+<p>select dblink_connect(‘myconn’, ‘host=XXX.XXX.XXX.XXX port=XX dbname=postgres user=myname password=mypassword’);<br>myconn表示连接名称，可以不写，不过建议还是写下连接名称。</p>
+<blockquote>
+<ul>
+<li><strong>dblink_disconnect</strong></li>
+</ul>
+</blockquote>
+<p>断开远程数据库连接，比如</p>
+<p>select dblink_disconnect(‘myconn’) ;</p>
+<blockquote>
+<ul>
+<li><strong>dblink</strong></li>
+</ul>
+</blockquote>
+<p>这个命令意思就是执行一个远程的查询。如果远程连接成功，那么就可以在本地操作远程数据库了。</p>
+<p>select <em> from dblink(‘myconn’,’select </em> from mytable’) as t(a int, b text, c text[]) </p>
+<p>（注:远程数据库的表结构发生改变时，则需要重新执行此操作）</p>
+<blockquote>
+<ul>
+<li><strong>dblink_error_message</strong></li>
+</ul>
+</blockquote>
+<p>得到最后出现错误的信息提示。select dblink_error_message(‘myconn’);</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;准备工作:创建dblink扩展：create extension dblink;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;dblink_connect&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个命令主要作用是建
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="postgresql dblink" scheme="http://yoursite.com/tags/postgresql-dblink/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 离线打包</title>
+    <link href="http://yoursite.com/2016/09/15/Android-%E7%A6%BB%E7%BA%BF%E6%89%93%E5%8C%85/"/>
+    <id>http://yoursite.com/2016/09/15/Android-离线打包/</id>
+    <published>2016-09-15T10:14:05.000Z</published>
+    <updated>2016-09-15T10:14:05.082Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>netbeans 常用快捷键</title>
+    <link href="http://yoursite.com/2016/09/15/netbeans-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://yoursite.com/2016/09/15/netbeans-常用快捷键/</id>
+    <published>2016-09-15T10:13:36.000Z</published>
+    <updated>2016-09-16T03:51:59.692Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<ul>
+<li>删除一行代码: CTRL+C</li>
+<li>自动修复导入包：Ctrl-Shift-I</li>
+<li>自动格式化代码：Alt-Shift-F </li>
+<li>向上或者向下复制：Ctrl+Shift+Up/Down</li>
+<li>向上或者向下移动：Alt+Shift+Up/Down</li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;删除一行代码: CTRL+C&lt;/li&gt;
+&lt;li&gt;自动修复导入包：Ctrl-Shift-I&lt;/li&gt;
+&lt;li&gt;自动格式化代码：Alt-Shift-F &lt;/li&gt;
+&lt;li&gt;向上或者向下复制：Ctrl+Shift+Up/Down&lt;/li&gt;
+&lt;
+    
+    </summary>
+    
+      <category term="开发工具" scheme="http://yoursite.com/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="快捷键 Netbeans" scheme="http://yoursite.com/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE-Netbeans/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos 常用命令集锦</title>
+    <link href="http://yoursite.com/2016/09/15/centos-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E9%94%A6/"/>
+    <id>http://yoursite.com/2016/09/15/centos-常用命令集锦/</id>
+    <published>2016-09-15T10:12:54.000Z</published>
+    <updated>2016-09-15T10:12:55.020Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sprint boot 学习笔记</title>
+    <link href="http://yoursite.com/2016/09/15/Sprint-boot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/09/15/Sprint-boot-学习笔记/</id>
+    <published>2016-09-15T10:11:02.000Z</published>
+    <updated>2016-09-15T10:11:02.033Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ant学习笔记</title>
+    <link href="http://yoursite.com/2016/09/15/ant%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/09/15/ant学习笔记/</id>
+    <published>2016-09-15T10:10:35.000Z</published>
+    <updated>2016-09-15T10:10:35.566Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>maven相关知识</title>
+    <link href="http://yoursite.com/2016/09/15/maven%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
+    <id>http://yoursite.com/2016/09/15/maven相关知识/</id>
+    <published>2016-09-15T10:10:14.000Z</published>
+    <updated>2016-09-15T10:10:14.140Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>postgresql</title>
+    <link href="http://yoursite.com/2016/09/15/postgresql/"/>
+    <id>http://yoursite.com/2016/09/15/postgresql/</id>
+    <published>2016-09-15T10:09:38.000Z</published>
+    <updated>2016-09-15T10:09:38.920Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>angularjs学习笔记</title>
+    <link href="http://yoursite.com/2016/09/15/angularjs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/09/15/angularjs学习笔记/</id>
+    <published>2016-09-15T10:07:52.000Z</published>
+    <updated>2016-09-15T10:07:52.656Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>mui学习笔记</title>
@@ -49,60 +241,164 @@
     <link href="http://yoursite.com/2016/09/15/git%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/15/git命令学习笔记/</id>
     <published>2016-09-15T07:34:04.000Z</published>
-    <updated>2016-09-15T07:36:20.073Z</updated>
+    <updated>2016-09-16T08:19:59.423Z</updated>
     
-    <content type="html"><![CDATA[<p>ssh -T git@github.roamdata.com</p>
-<p>//add or remove remote repositary<br>git remote -v<br>git remote remove origin<br>git remote remove upstream<br>git remote add origin git@github.roamdata.com:fli/ROAMSupport.git<br>git remote add upstream git@github.roamdata.com:RoamDataCorp/ROAMSupport.git<br>//view sb’s git<br>git remote add <somebody> <somebody's git="">
-git remote rm <somebody> <somebody's git=""><br>//update url<br>git remote set-url origin <a href="https://[joey.tang]@stash.roamdata.com/scm/~joey.tang/roamsupport.git" target="_blank" rel="external">https://[joey.tang]@stash.roamdata.com/scm/~joey.tang/roamsupport.git</a><br>git remote set-url upstream <a href="https://[joey.tang]@stash.roamdata.com/scm/mcm/roamsupport.git" target="_blank" rel="external">https://[joey.tang]@stash.roamdata.com/scm/mcm/roamsupport.git</a></somebody's></somebody></somebody's></somebody></p>
-<p>//clone<br>git clone git@github.roamdata.com:fli/TSP_Goodies.git</p>
-<p>git branch develop<br>git checkout master<br>git checkout develop<br>git branch -v //to see all the branch</p>
-<p>//add a new branch<br>git branch feature1<br>check out feature1<br>commit feature1<br>push origin feature1</p>
-<p>//删除本地分支<br>git branch -d feature1<br>git branch -D feature1<br>//删除远程分支<br>git push origin –delete feature1</p>
-<p>git checkout filepath</p>
-<p>git checkout -b temp</p>
-<p>//update repositary<br>git remote update<br>git pull upstream develop<br>git pull upstream master</p>
-<p>//push local code to remote repositary<br>commit files<br>git push origin develop</p>
-<p>//how to commit files<br>git status<br>git add *.jsp<br>git commit -m “MCMV-3186 remove redundan Account string”</p>
-<p>git commit –amend -m “msg” //修改上一次的提交信息<br>git commit –amend  //修改上一次提交的内容</p>
-<p>//git add 的撤销操作<br>git reset HEAD file</p>
-<p>//how to amend the commit message<br>git rebase -i HEAD~4<br>change the key pick to r //reword which means use the commit, but amend commit message<br>force push to origin</p>
-<p>//保留本地文件，更新最新代码<br>git stash<br>pull upstream<br>git stash pop</p>
-<p>//view repositary history<br>gitk –all&amp;</p>
-<p>//see file history<br>gitk path to file<br>git blame filepath</p>
-<p>//view command history and exit command prompt<br>history<br>exit</p>
-<p>//merge<br>git pull upstream develop<br>git push origin develop<br>git push origin develop -f  //<br>git push upstrean devlop  -f  //不允许</p>
-<p>//how to make alias, so you can use a short command<br>cd ~/<br>vim .bash_profile<br>alias sshdev02=’ssh -i ~/.ssh/DEV02_20140926 ec2-user@54.250.7.5’</p>
-<p>//db<br>ssh -i ~/.ssh/DEV02_20140926 ec2-user@54.250.7.5<br>psql -h 54.250.7.5 -U postgres<br>\q<br>cd /opt/tsp<br>sudo -s<br>bin/tspinit tspadmin R0amdata ROAMDATA</p>
-<p>//log<br>cd /opt/tsp/inst/default/log/<br>tail -f server.log</p>
-<p>//push to upstream</p>
-<ol>
-<li>reset back to latest upstream</li>
-<li>cherry-pick origin commit</li>
-<li>push upstream</li>
-<li>push origin force</li>
-</ol>
-<p>//revert</p>
-<ol>
-<li>update</li>
-<li>reset top upstream</li>
-<li>revert</li>
-<li>push origin</li>
-<li>push upstream</li>
-</ol>
-<p>//origin多次提交后，再提交到upstream  ??<br>mixed reset</p>
-<p>//to remove a tag and update tags:<br>git tag -d 5.4.RC4.1       (to remove the tag locally)<br>git push origin :refs/tags/5.4.RC4.1    (to push the removal to origin)<br>  (replace “origin” with your personal remote repository name if necessary)<br>git remote update</p>
-<p>//my squash which succeed<br>add a new branch<br>checkout the new branch<br>cherry pick several pushes which need to squah on other branch<br>git reset –soft HEAD~3  //change 3 to the number of cherry-picks<br>git commit -m ‘new commit message’</p>
-<p>//Git Squash<br>REF: <a href="http://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git/5201642#5201642" target="_blank" rel="external">http://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git/5201642#5201642</a></p>
-<h1 id="Reset-the-current-branch-to-the-commit-just-before-the-last-12"><a href="#Reset-the-current-branch-to-the-commit-just-before-the-last-12" class="headerlink" title="Reset the current branch to the commit just before the last 12:"></a>Reset the current branch to the commit just before the last 12:</h1><p>git reset –hard HEAD~12</p>
-<h1 id="HEAD-1-is-where-the-branch-was-just-before-the-previous-command"><a href="#HEAD-1-is-where-the-branch-was-just-before-the-previous-command" class="headerlink" title="HEAD@{1} is where the branch was just before the previous command."></a>HEAD@{1} is where the branch was just before the previous command.</h1><h1 id="This-command-sets-the-state-of-the-index-to-be-as-it-would-just"><a href="#This-command-sets-the-state-of-the-index-to-be-as-it-would-just" class="headerlink" title="This command sets the state of the index to be as it would just"></a>This command sets the state of the index to be as it would just</h1><h1 id="after-a-merge-from-that-commit"><a href="#after-a-merge-from-that-commit" class="headerlink" title="after a merge from that commit:"></a>after a merge from that commit:</h1><p>git merge –squash HEAD@{1}</p>
-<h1 id="Commit-those-squashed-changes-The-commit-message-will-be-helpfully"><a href="#Commit-those-squashed-changes-The-commit-message-will-be-helpfully" class="headerlink" title="Commit those squashed changes.  The commit message will be helpfully"></a>Commit those squashed changes.  The commit message will be helpfully</h1><h1 id="prepopulated-with-the-commit-messages-of-all-the-squashed-commits"><a href="#prepopulated-with-the-commit-messages-of-all-the-squashed-commits" class="headerlink" title="prepopulated with the commit messages of all the squashed commits:"></a>prepopulated with the commit messages of all the squashed commits:</h1><p>git commit</p>
-<p>$ git commit -m “MCMV-3750 Fix the bug that Submerchant navigation title is not<br> correct” -c “This issue is caused by lacking isSubMerchant judgement when disp<br>lay the navigation title of audit page and roammerchant page “<br>fatal: Option -m cannot be combined with -c/-C/-F/–fixup.</p>
+    <content type="html"><![CDATA[<h2 id="git-初始化"><a href="#git-初始化" class="headerlink" title="git 初始化"></a>git 初始化</h2><blockquote>
+<ul>
+<li>git config –global user.email userEmail</li>
+<li>git config –global user.name userName</li>
+</ul>
+</blockquote>
+<h2 id="repositary-操作"><a href="#repositary-操作" class="headerlink" title="repositary 操作"></a>repositary 操作</h2><h3 id="1-添加仓库"><a href="#1-添加仓库" class="headerlink" title="1. 添加仓库"></a>1. 添加仓库</h3><blockquote>
+<ul>
+<li>git remote add 别名 “url”</li>
+<li>eg: git remote add origin originUrl</li>
+</ul>
+</blockquote>
+<h3 id="2-移除仓库"><a href="#2-移除仓库" class="headerlink" title="2. 移除仓库"></a>2. 移除仓库</h3><blockquote>
+<ul>
+<li>git remote remove origin/upstream</li>
+</ul>
+</blockquote>
+<h3 id="3-更新仓库地址"><a href="#3-更新仓库地址" class="headerlink" title="3. 更新仓库地址"></a>3. 更新仓库地址</h3><blockquote>
+<ul>
+<li>git remote set-url origin newOriginUrl </li>
+</ul>
+</blockquote>
+<h3 id="4-查看他人仓库"><a href="#4-查看他人仓库" class="headerlink" title="4. 查看他人仓库"></a>4. 查看他人仓库</h3><blockquote>
+<ul>
+<li>git remote add <somebody> &lt;somebody’s git&gt;</somebody></li>
+<li>git remote rm <somebody> &lt;somebody’s git&gt;</somebody></li>
+</ul>
+</blockquote>
+<h3 id="5-clone"><a href="#5-clone" class="headerlink" title="5. clone"></a>5. clone</h3><blockquote>
+<ul>
+<li>git clone gitUrl</li>
+</ul>
+</blockquote>
+<h3 id="6-查看仓库详细信息"><a href="#6-查看仓库详细信息" class="headerlink" title="6. 查看仓库详细信息"></a>6. 查看仓库详细信息</h3><blockquote>
+<ul>
+<li>git remote -v</li>
+</ul>
+</blockquote>
+<h3 id="7-view-repositary-history"><a href="#7-view-repositary-history" class="headerlink" title="7. view repositary history"></a>7. view repositary history</h3><blockquote>
+<ul>
+<li>gitk –all&amp;</li>
+</ul>
+</blockquote>
+<h2 id="branch-操作"><a href="#branch-操作" class="headerlink" title="branch 操作"></a>branch 操作</h2><h3 id="1-创建分支"><a href="#1-创建分支" class="headerlink" title="1. 创建分支"></a>1. 创建分支</h3><blockquote>
+<ul>
+<li>git branch feature1</li>
+<li>check out feature1</li>
+<li>commit feature1</li>
+<li>push origin feature1</li>
+</ul>
+</blockquote>
+<h3 id="2-删除本地分支"><a href="#2-删除本地分支" class="headerlink" title="2. 删除本地分支"></a>2. 删除本地分支</h3><blockquote>
+<ul>
+<li>git branch -d feature1</li>
+<li>git branch -D feature1</li>
+</ul>
+</blockquote>
+<h3 id="3-删除远程分支"><a href="#3-删除远程分支" class="headerlink" title="3. 删除远程分支"></a>3. 删除远程分支</h3><blockquote>
+<ul>
+<li>git push origin –delete feature1</li>
+</ul>
+</blockquote>
+<h3 id="4-切换分支"><a href="#4-切换分支" class="headerlink" title="4. 切换分支"></a>4. 切换分支</h3><blockquote>
+<ul>
+<li>git checkout master/develop  （切换到master/develop分支）</li>
+</ul>
+</blockquote>
+<h3 id="5-查看所有分支"><a href="#5-查看所有分支" class="headerlink" title="5. 查看所有分支"></a>5. 查看所有分支</h3><blockquote>
+<ul>
+<li>git branch -v </li>
+</ul>
+</blockquote>
+<h2 id="tag操作"><a href="#tag操作" class="headerlink" title="tag操作"></a>tag操作</h2><h3 id="1-本地新增tag"><a href="#1-本地新增tag" class="headerlink" title="1. 本地新增tag"></a>1. 本地新增tag</h3><blockquote>
+<ul>
+<li>git tag -a tagName -m “comments”</li>
+</ul>
+</blockquote>
+<h3 id="2-推送指定tag"><a href="#2-推送指定tag" class="headerlink" title="2. 推送指定tag"></a>2. 推送指定tag</h3><blockquote>
+<ul>
+<li>git push origin tagName</li>
+</ul>
+</blockquote>
+<h3 id="3-推送所有本地新增标签"><a href="#3-推送所有本地新增标签" class="headerlink" title="3. 推送所有本地新增标签"></a>3. 推送所有本地新增标签</h3><blockquote>
+<ul>
+<li>git push origin –tags</li>
+</ul>
+</blockquote>
+<h3 id="4-删除tag"><a href="#4-删除tag" class="headerlink" title="4. 删除tag"></a>4. 删除tag</h3><blockquote>
+<ul>
+<li>git tag -d tagName</li>
+</ul>
+</blockquote>
+<h3 id="5-同步删除远程分支上的tag"><a href="#5-同步删除远程分支上的tag" class="headerlink" title="5. 同步删除远程分支上的tag"></a>5. 同步删除远程分支上的tag</h3><blockquote>
+<ul>
+<li>git push upstream develop :tag名称<br>(注：tag名称前没有”:”是新增,有”:”是删除)</li>
+</ul>
+</blockquote>
+<h3 id="6-查看tag"><a href="#6-查看tag" class="headerlink" title="6. 查看tag"></a>6. 查看tag</h3><blockquote>
+<ul>
+<li>git tag</li>
+</ul>
+</blockquote>
+<h2 id="push代码"><a href="#push代码" class="headerlink" title="push代码"></a>push代码</h2><h3 id="1-提交代码"><a href="#1-提交代码" class="headerlink" title="1. 提交代码"></a>1. 提交代码</h3><blockquote>
+<ul>
+<li>git status</li>
+<li>git add fileName</li>
+<li>git commit -m “comments”</li>
+</ul>
+</blockquote>
+<h3 id="2-修改上一次提交信息-内容"><a href="#2-修改上一次提交信息-内容" class="headerlink" title="2. 修改上一次提交信息/内容"></a>2. 修改上一次提交信息/内容</h3><blockquote>
+<ul>
+<li>git commit –amend -m “msg” //修改上一次的提交信息</li>
+<li>git commit –amend  //修改上一次提交的内容</li>
+</ul>
+</blockquote>
+<h2 id="保留本地修改，更新最新代码"><a href="#保留本地修改，更新最新代码" class="headerlink" title="保留本地修改，更新最新代码"></a>保留本地修改，更新最新代码</h2><blockquote>
+<ul>
+<li>git stash</li>
+<li>pull upstream</li>
+<li>git stash pop</li>
+</ul>
+</blockquote>
+<h2 id="删除stash"><a href="#删除stash" class="headerlink" title="删除stash"></a>删除stash</h2><blockquote>
+<ul>
+<li>git stash drop</li>
+</ul>
+</blockquote>
+<h2 id="develop-cherry-pick到master上冲突"><a href="#develop-cherry-pick到master上冲突" class="headerlink" title="develop cherry-pick到master上冲突"></a>develop cherry-pick到master上冲突</h2><blockquote>
+<ul>
+<li>git checkout master</li>
+<li>git status，查看冲突文件</li>
+<li>手动解决冲突文件</li>
+<li>git add 修改的文件</li>
+<li>git status查看</li>
+<li>git commit :在comment后添加 resolved,输入”:wq”保存并退出</li>
+</ul>
+</blockquote>
+<h2 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h2><p>origin 下的branchA merge 到develop</p>
+<blockquote>
+<ul>
+<li>git checkout develop</li>
+<li>git stash</li>
+<li>git merge origin/branchA</li>
+<li>git stash pop</li>
+<li>git push origin develop -f<br>（force push）</li>
+</ul>
+</blockquote>
+<h2 id="update-repositary"><a href="#update-repositary" class="headerlink" title="update repositary"></a>update repositary</h2><p>git remote update<br>git pull upstream develop</p>
+<h2 id="git-add-的撤销操作"><a href="#git-add-的撤销操作" class="headerlink" title="git add 的撤销操作"></a>git add 的撤销操作</h2><p>git reset HEAD file</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;ssh -T git@github.roamdata.com&lt;/p&gt;
-&lt;p&gt;//add or remove remote repositary&lt;br&gt;git remote -v&lt;br&gt;git remote remove origin&lt;br&gt;git remote remove
+      &lt;h2 id=&quot;git-初始化&quot;&gt;&lt;a href=&quot;#git-初始化&quot; class=&quot;headerlink&quot; title=&quot;git 初始化&quot;&gt;&lt;/a&gt;git 初始化&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;git config –global user.email u
     
     </summary>
     
@@ -110,6 +406,20 @@ git remote rm <somebody> <somebody's git=""><br>//update url<br>git remote set-u
     
     
       <category term="git命令" scheme="http://yoursite.com/tags/git%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo学习笔记</title>
+    <link href="http://yoursite.com/2016/09/15/hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/09/15/hexo学习笔记/</id>
+    <published>2016-09-15T06:54:23.000Z</published>
+    <updated>2016-09-15T06:54:23.773Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
     
   </entry>
   
