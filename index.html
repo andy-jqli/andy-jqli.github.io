@@ -299,8 +299,15 @@
       
         
           
-          
-          
+          准备工作:创建dblink扩展：create extension dblink;
+
+
+dblink_connect
+
+
+这个命令主要作用是建立一个到远程数据库的连接，比如
+select dblink_connect(‘myconn’, ‘host=XXX.XXX.XXX.XXX port=XX db
+          ...
 
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/09/15/postgres-dblink/#more" rel="contents">
@@ -1305,7 +1312,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
