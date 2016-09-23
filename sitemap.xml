@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/09/15/app%E7%A6%BB%E7%BA%BF%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88--Web%20SQL/</loc>
+    
+    <lastmod>2016-09-23T11:03:42.154Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/09/15/mui%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2016-09-16T08:31:33.653Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>http://yoursite.com/2016/09/15/app%E7%A6%BB%E7%BA%BF%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88--indexedDB/</loc>
     
     <lastmod>2016-09-15T06:47:08.323Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/09/15/app%E7%A6%BB%E7%BA%BF%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88--Web%20SQL/</loc>
-    
-    <lastmod>2016-09-15T06:46:22.984Z</lastmod>
     
   </url>
   
