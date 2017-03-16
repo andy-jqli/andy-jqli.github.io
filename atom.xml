@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-16T02:17:52.042Z</updated>
+  <updated>2017-03-16T10:10:55.757Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,21 +16,74 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>centos 常用命令集锦</title>
+    <link href="http://yoursite.com/2016/11/02/centos-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E9%94%A6/"/>
+    <id>http://yoursite.com/2016/11/02/centos-常用命令集锦/</id>
+    <published>2016-11-02T05:11:21.000Z</published>
+    <updated>2017-03-16T10:10:55.757Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Windows平台安装Xshell-5"><a href="#Windows平台安装Xshell-5" class="headerlink" title="Windows平台安装Xshell 5"></a>Windows平台安装Xshell 5</h2><blockquote>
+<ul>
+<li>配置访问centos的链接[<a href="https://github.com/ma6174/vim" target="_blank" rel="external">https://github.com/ma6174/vim</a>]</li>
+<li>安装vim编辑器: `wget -qO- <a href="https://raw.github.com/ma6174/vim/master/setup.sh" target="_blank" rel="external">https://raw.github.com/ma6174/vim/master/setup.sh</a> | sh -x’</li>
+</ul>
+</blockquote>
+<h2 id="Centos7常用命令"><a href="#Centos7常用命令" class="headerlink" title="Centos7常用命令"></a>Centos7常用命令</h2><h3 id="用户相关"><a href="#用户相关" class="headerlink" title="用户相关:"></a>用户相关:</h3><blockquote>
+<ul>
+<li>使用<code>whoami</code>命令查看所使用的登录名称</li>
+<li>删除用户: <code>userdel username</code></li>
+<li>切换用户: <code>su – username</code><br>[切换为username]</li>
+<li>用户配置文件存放路径:<br>/etc/group  文件是用户组的配置文件。<br>/etc/passwd 文件是用户的配置文件。</li>
+<li><p>修改系统语言为英文：<br><code>vim /etc/sysconfig/i18n</code><br>改为：LANG=”en_US.UTF-8”</p>
+</li>
+<li><p>修改centos系统语言为英文（7）<br><code>vi /etc/locale.conf</code><br>改为：LANG=”en_US.UTF-8”</p>
+</li>
+</ul>
+<ul>
+<li>查看centos是32位还是64位系统：<br><code>sudo uname –m</code></li>
+</ul>
+</blockquote>
+<h3 id="网络相关："><a href="#网络相关：" class="headerlink" title="网络相关："></a>网络相关：</h3><blockquote>
+<ul>
+<li>查看网卡uuid: <code>nmcli con show</code></li>
+<li>重启网络: <code>service network restart</code></li>
+<li><code>nmcli dev status</code></li>
+<li>添加默认网关路由: <code>route add default gw &lt;默认网关地址&gt;</code></li>
+<li>查看路由: <code>route –n</code></li>
+<li>查看网关:<code>netstat -rn</code></li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Windows平台安装Xshell-5&quot;&gt;&lt;a href=&quot;#Windows平台安装Xshell-5&quot; class=&quot;headerlink&quot; title=&quot;Windows平台安装Xshell 5&quot;&gt;&lt;/a&gt;Windows平台安装Xshell 5&lt;/h2&gt;&lt;bloc
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="centos linux" scheme="http://yoursite.com/tags/centos-linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>centos7下安装jdk</title>
     <link href="http://yoursite.com/2016/11/02/centos7%E4%B8%8B%E5%AE%89%E8%A3%85jdk/"/>
     <id>http://yoursite.com/2016/11/02/centos7下安装jdk/</id>
     <published>2016-11-02T05:11:21.000Z</published>
-    <updated>2017-03-16T02:17:52.042Z</updated>
+    <updated>2017-03-16T09:53:04.964Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Centos7下安装jdk"><a href="#Centos7下安装jdk" class="headerlink" title="Centos7下安装jdk"></a>Centos7下安装jdk</h2><blockquote>
 <ul>
 <li>下载jdk8<br>登录网址：<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a><br>选择对应jdk版本下载。（可在Windows下下载完成后，通过文件夹共享到Linux上）</li>
-<li>登录Linux，切换到root用户<br>su root 获取root用户权限，当前工作目录不变(需要root密码)<br>或sudo -i 不需要root密码直接切换成root（需要当前用户密码）</li>
-<li>在usr目录下建立java安装目录<br>cd /usr                         mkdir java</li>
-<li>将jdk-8u60-linux-x64.tar.gz拷贝到java目录下<br>cp /mnt/hgfs/linux/jdk-8u60-linux-x64.tar.gz /usr/java/</li>
-<li>解压jdk到当前目录<br>tar -zxvf jdk-8u60-linux-x64.tar.gz           得到文件夹 jdk1.8.0_60<br>*安装完毕为他建立一个链接以节省目录长度<br>ln -s /usr/java/jdk1.8.0_60/ /usr/jdk</li>
-<li>编辑配置文件，配置环境变量<br>vim /etc/profile              添加如下内容：JAVA_HOME根据实际目录来<br>JAVA_HOME=/usr/java/jdk1.8.0_60<br>CLASSPATH=$JAVA_HOME/lib/<br>PATH=$PATH:$JAVA_HOME/bin<br>export PATH JAVA_HOME CLASSPATH<br>*重启机器或执行命令 ：source /etc/profile<br>sudo shutdown -r now</li>
-<li>查看安装情况<br>java -version<br>java version “1.8.0_60”<br>Java(TM) SE Runtime Environment (build 1.8.0_60-b27)<br>Java HotSpot(TM) Client VM (build 25.60-b23, mixed mode)<br>可能出现的错误信息：<br>bash: ./java: cannot execute binary file<br>出现这个错误的原因可能是在32位的操作系统上安装了64位的jdk，<br>查看jdk版本和Linux版本位数是否一致。<br>查看你安装的Ubuntu是32位还是64位系统：<br>sudo uname –m<br>i686 //表示是32位<br>x86_64 // 表示是64位</li>
+<li>登录Linux，切换到root用户<br><code>su root</code> 获取root用户权限，当前工作目录不变(需要root密码)<br>或sudo -i 不需要root密码直接切换成root（需要当前用户密码）</li>
+<li>在usr目录下建立java安装目录<br><code>cd /usr</code>                         <code>mkdir java</code></li>
+<li>将jdk-8u60-linux-x64.tar.gz拷贝到java目录下<br><code>cp /mnt/hgfs/linux/jdk-8u60-linux-x64.tar.gz /usr/java/</code></li>
+<li>解压jdk到当前目录<br><code>tar -zxvf jdk-8u60-linux-x64.tar.gz</code>          得到文件夹 jdk1.8.0_60<br>*安装完毕为他建立一个链接以节省目录长度<br><code>ln -s /usr/java/jdk1.8.0_60/ /usr/jdk</code></li>
+<li>编辑配置文件，配置环境变量<br>vim /etc/profile              添加如下内容：JAVA_HOME根据实际目录来<br>JAVA_HOME=/usr/java/jdk1.8.0_60<br>CLASSPATH=$JAVA_HOME/lib/<br>PATH=$PATH:$JAVA_HOME/bin<br>export PATH JAVA_HOME CLASSPATH<br>*重启机器或执行命令 ：<code>source /etc/profile</code><br><code>sudo shutdown -r now</code></li>
+<li>查看安装情况<br><code>java -version</code><br>java version “1.8.0_60”<br>Java(TM) SE Runtime Environment (build 1.8.0_60-b27)<br>Java HotSpot(TM) Client VM (build 25.60-b23, mixed mode)<br>可能出现的错误信息：<br>bash: ./java: cannot execute binary file<br>出现这个错误的原因可能是在32位的操作系统上安装了64位的jdk，<br>查看jdk版本和Linux版本位数是否一致。<br>查看你安装的Ubuntu是32位还是64位系统：<br><code>sudo uname --m</code><br>i686 //表示是32位<br>x86_64 // 表示是64位</li>
 </ul>
 </blockquote>
 ]]></content>
@@ -55,46 +108,43 @@
     <link href="http://yoursite.com/2016/11/02/centos7%E4%B8%8B%E5%AE%89%E8%A3%85postgres/"/>
     <id>http://yoursite.com/2016/11/02/centos7下安装postgres/</id>
     <published>2016-11-02T05:11:21.000Z</published>
-    <updated>2017-03-16T02:15:05.882Z</updated>
+    <updated>2017-03-16T10:07:22.613Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Centos7下安装postgres"><a href="#Centos7下安装postgres" class="headerlink" title="Centos7下安装postgres"></a>Centos7下安装postgres</h2><blockquote>
 <ul>
 <li>验证postgres是否安装成功或者查看系统是否有postgres：</li>
-<li>#sudo rpm -aq| grep postgres</li>
+<li><code>#sudo rpm -aq| grep postgres</code></li>
 <li>卸载已有的postgres:</li>
-<li>#yum remove postgresql*</li>
+<li><code>#yum remove postgresql*</code></li>
 <li><p>安装postgres  [postgres下载地址: <a href="https://yum.postgresql.org/repopackages.php" target="_blank" rel="external">https://yum.postgresql.org/repopackages.php</a>]<br>以postgres6为例:</p>
 </li>
 <li><p>Step1,安装PostgreSQL源:</p>
 </li>
-<li>#rpm -Uvh <a href="https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9&gt;" target="_blank" rel="external">https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9&gt;</a> * .6-3.noarch.rpm</li>
+<li><code>#rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9&gt; * .6-3.noarch.rpm</code></li>
 <li>Step2,执行安装命令:</li>
-<li>sudo yum update</li>
-<li><p>sudo yum install postgresql96-server postgresql96-contrib</p>
+<li><code>sudo yum update</code></li>
+<li><p><code>sudo yum install postgresql96-server postgresql96-contrib</code></p>
 </li>
-<li><p>Step3, 验证是否安装成功<br>sudo rpm -aq| grep postgres<br>执行结果如下:<br>postgresql96-9.6.2-2PGDG.rhel7.x86_64<br>postgresql96-server-9.6.2-2PGDG.rhel7.x86_64<br>postgresql96-libs-9.6.2-2PGDG.rhel7.x86_64<br>postgresql96-contrib-9.6.2-2PGDG.rhel7.x86_64</p>
+<li><p>Step3, 验证是否安装成功<br><code>sudo rpm -aq| grep postgres</code><br>执行结果如下:<br>postgresql96-9.6.2-2PGDG.rhel7.x86_64<br>postgresql96-server-9.6.2-2PGDG.rhel7.x86_64<br>postgresql96-libs-9.6.2-2PGDG.rhel7.x86_64<br>postgresql96-contrib-9.6.2-2PGDG.rhel7.x86_64</p>
 </li>
 <li><p>Step4, 初始化数据库</p>
 </li>
-<li><p>sudo /usr/pgsql-9.4/bin/postgresql94-setup initdb</p>
+<li><p><code>sudo /usr/pgsql-9.4/bin/postgresql94-setup initdb</code></p>
 </li>
 <li><p>在初始化数据库时可以指定参数 –PGDATA=“/data”，该参数是用于指明数据库的数据文件的存放路径，默认是在/var/lib/pgsql/9.4/data路径下</p>
 </li>
-<li><p>Step5, 启动服务并设置为开机启动<br>[root@wenddy ~]# sudo systemctl enable postgresql-9.6<br>Created symlink from /etc/systemd/system/multi-user.target.wants/postgresql-9.6.service to /usr/lib/systemd/system/postgresql-9.6.service.</p>
+<li><p>Step5, 启动服务并设置为开机启动<br>[root@wenddy ~]# <code>sudo systemctl enable postgresql-9.6</code><br>Created symlink from /etc/systemd/system/multi-user.target.wants/postgresql-9.6.service to /usr/lib/systemd/system/postgresql-9.6.service.</p>
 </li>
-</ul>
-</blockquote>
-<p>[root@wenddy ~]# sudo systemctl start postgresql-9.6</p>
-<blockquote>
-<ul>
+<li><p>[root@wenddy ~]# <code>sudo systemctl start postgresql-9.6</code></p>
+</li>
 <li><p>Step6, 开放防火墙端口</p>
 </li>
-<li><p>sudo firewall-cmd –permanent –add-port=5432/tcp<br>success</p>
+<li><p><code>sudo firewall-cmd --permanent --add-port=5432/tcp</code><br>success</p>
 </li>
-<li>sudo firewall-cmd –permanent –add-port=80/tcp<br>success</li>
-<li>sudo firewall-cmd –reload<br>Success</li>
-<li>Step7, 访问PostgreSQL<br>[root@wenddy ~]# su - postgres<br>Last login: Tue Mar 14 13:08:14 CST 2017 on pts/0<br>-bash-4.2$ psql<br>输入命令psql将看到PostgrSQL的版本信息。<br>psql (9.6.2)<br>Type “help” for help.</li>
-<li>Step8,设置postgres用户密码<br>postgres=# \password postgres<br>Enter new password:<br>Enter it again:<br>输入su – postgres<br>输入 psql,进行pgsql操作:</li>
+<li><code>sudo firewall-cmd --permanent --add-port=80/tcp</code><br>success</li>
+<li><code>sudo firewall-cmd --reload</code><br>Success</li>
+<li>Step7, 访问PostgreSQL<br>[root@wenddy ~]# <code>su - postgres</code><br>Last login: Tue Mar 14 13:08:14 CST 2017 on pts/0<br>-bash-4.2$ psql<br>输入命令psql将看到PostgrSQL的版本信息。<br>psql (9.6.2)<br>Type “help” for help.</li>
+<li>Step8,设置postgres用户密码<br>postgres=# \password postgres<br>Enter new password:<br>Enter it again:<br>输入<code>su – postgres</code><br>输入 psql,进行pgsql操作:</li>
 </ul>
 </blockquote>
 <h3 id="4-1-Postgresql控制台命令"><a href="#4-1-Postgresql控制台命令" class="headerlink" title="4.1 Postgresql控制台命令:"></a>4.1 Postgresql控制台命令:</h3><blockquote>
@@ -112,52 +162,35 @@
 <li>§\conninfo：列出当前数据库和连接的信息</li>
 </ul>
 </blockquote>
-<h3 id="4-2-查看pgsql安装路径"><a href="#4-2-查看pgsql安装路径" class="headerlink" title="4.2 查看pgsql安装路径:"></a>4.2 查看pgsql安装路径:</h3><p> ps -ef|grep postgres</p>
+<h3 id="4-2-查看pgsql安装路径"><a href="#4-2-查看pgsql安装路径" class="headerlink" title="4.2 查看pgsql安装路径:"></a>4.2 查看pgsql安装路径:</h3><p> <code>ps -ef|grep postgres</code></p>
 <h3 id="4-3-PostgresSQL-数据库配置实现远程访问"><a href="#4-3-PostgresSQL-数据库配置实现远程访问" class="headerlink" title="4.3 PostgresSQL 数据库配置实现远程访问"></a>4.3 PostgresSQL 数据库配置实现远程访问</h3><blockquote>
 <ul>
 <li>安装PostgreSQL数据库之后，默认是只接受本地访问连接。如果想在其他主机上访问PostgreSQL数据库服务器 *，就需要进行相应的配置。只需要修改/var/lib/pgsql/9.6/data/目录下的pg_hba.conf和postgresql.conf。</li>
 <li>pg_hba.conf：配置对数据库的访问权限，</li>
 <li>postgresql.conf：配置PostgreSQL数据库服务器的相应的参数。</li>
-<li>修改pg_hba.conf<br>这个文件最后有一个列表，它决定了分派了每一个用户的权限，以及认证方式。格式是“Type Database User Address Method”，要注意的是method最好写md5</li>
+<li>修改pg_hba.conf<br>这个文件最后有一个列表，它决定了分派了每一个用户的权限，以及认证方式。格式是“Type Database User Address Method”，要注意的是method最好写md5’</li>
+</ul>
+</blockquote>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"># TYPE  DATABASE        USER            ADDRESS                 METHOD</div><div class="line"># &quot;local&quot; is for Unix domain socket connections only</div><div class="line">local   all             all                                     peer</div><div class="line"># IPv4 local connections:</div><div class="line">host    all             all             127.0.0.1/32            trust</div><div class="line">#host	all		all		0.0.0.0/0		md5</div><div class="line">host    all             all             0.0.0.0/0               trust</div><div class="line"># IPv6 local connections:</div><div class="line">host    all             all             ::1/128                 ident</div><div class="line"># Allow replication connections from localhost, by a user with the</div><div class="line"># replication privilege.</div><div class="line">#local   replication     postgres                                peer</div><div class="line">#host    replication     postgres        127.0.0.1/32            ident</div><div class="line">#host    replication     postgres        ::1/128                  ident</div></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<ul>
+<li>修改postgresql.conf文件<br>将数据库服务器的监听模式修改为监听所有主机发出的连接请求。<br>将listen_addresses前的#去掉，并将listen_addresses =’localhost’改成listen_addresses = ‘*’<br>查看：[xxx@xxx ~]# <code>ps -ef|grep postgres</code></li>
 </ul>
 <ol>
-<li><h1 id="TYPE-DATABASE-USER-ADDRESS-METHOD"><a href="#TYPE-DATABASE-USER-ADDRESS-METHOD" class="headerlink" title="TYPE  DATABASE        USER            ADDRESS                 METHOD"></a>TYPE  DATABASE        USER            ADDRESS                 METHOD</h1></li>
-<li><h1 id="“local”-is-for-Unix-domain-socket-connections-only"><a href="#“local”-is-for-Unix-domain-socket-connections-only" class="headerlink" title="“local” is for Unix domain socket connections only"></a>“local” is for Unix domain socket connections only</h1></li>
-<li>local   all             all                                     peer</li>
-<li><h1 id="IPv4-local-connections"><a href="#IPv4-local-connections" class="headerlink" title="IPv4 local connections:"></a>IPv4 local connections:</h1></li>
-<li>host    all             all             127.0.0.1/32            trust</li>
-<li>#host    all        all        0.0.0.0/0        md5</li>
-<li>host    all             all             0.0.0.0/0               trust</li>
-<li><h1 id="IPv6-local-connections"><a href="#IPv6-local-connections" class="headerlink" title="IPv6 local connections:"></a>IPv6 local connections:</h1></li>
-<li>host    all             all             ::1/128                 ident</li>
-<li><h1 id="Allow-replication-connections-from-localhost-by-a-user-with-the"><a href="#Allow-replication-connections-from-localhost-by-a-user-with-the" class="headerlink" title="Allow replication connections from localhost, by a user with the"></a>Allow replication connections from localhost, by a user with the</h1></li>
-<li><h1 id="replication-privilege"><a href="#replication-privilege" class="headerlink" title="replication privilege."></a>replication privilege.</h1></li>
-<li>#local   replication     postgres                                peer</li>
-<li>#host    replication     postgres        127.0.0.1/32            ident</li>
-<li>#host    replication     postgres        ::1/128                  ident </li>
+<li>listen_addresses = ‘*’</li>
 </ol>
 <ul>
-<li>修改postgresql.conf文件<br>将数据库服务器的监听模式修改为监听所有主机发出的连接请求。<br>将listen_addresses前的#去掉，并将listen_addresses =’localhost’改成listen_addresses = ‘*’<br>查看：[xxx@xxx ~]# ps -ef|grep postgres</li>
-</ul>
-<ol>
-<li>listen_addresses = ‘*’                  # what IP address(es) to listen on;</li>
-<li><h1 id="comma-separated-list-of-addresses"><a href="#comma-separated-list-of-addresses" class="headerlink" title="comma-separated list of addresses;"></a>comma-separated list of addresses;</h1></li>
-<li><h1 id="defaults-to-‘localhost’-use-‘-’-for-all"><a href="#defaults-to-‘localhost’-use-‘-’-for-all" class="headerlink" title="defaults to ‘localhost’; use ‘*’ for all"></a>defaults to ‘localhost’; use ‘*’ for all</h1></li>
-<li><h1 id="change-requires-restart"><a href="#change-requires-restart" class="headerlink" title="(change requires restart)"></a>(change requires restart)</h1></li>
-<li>#port = 5432        </li>
-</ol>
-<ul>
-<li><p>防火墙<br>进入/usr/lib/firewalld/services/,若有pgsql的xml文件，则<br>firewall-cmd –permanent –add-service=xml文件名<br>firewall-cmd –reload</p>
+<li><p>防火墙<br>进入/usr/lib/firewalld/services/,若有pgsql的xml文件，则<br><code>firewall-cmd –permanent –add-service=xml文件名</code><br><code>firewall-cmd –reload</code></p>
 </li>
 <li><p>若没有则新建,xml文件内容:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">service</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">short</span>&gt;</span>Postgres 9.4 Database service<span class="tag">&lt;/<span class="name">short</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">description</span>&gt;</span>Postgres<span class="tag">&lt;/<span class="name">description</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">portprotocol="tcp"port="5432"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">service</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>然后执行</p>
 </li>
-<li>firewall-cmd –permanent –add-service=xml文件名</li>
-<li>firewall-cmd –reload</li>
+<li><code>firewall-cmd –permanent –add-service=xml文件名</code></li>
+<li><code>firewall-cmd –reload</code></li>
 <li>重启服务以使设置生效</li>
-<li><h1 id="service-postgresql-9-2-restart"><a href="#service-postgresql-9-2-restart" class="headerlink" title="service postgresql-9.2 restart"></a>service postgresql-9.2 restart</h1></li>
+<li><code># service postgresql-9.2 restart</code>  </li>
 </ul>
 </blockquote>
 ]]></content>
@@ -172,59 +205,6 @@
     
     
       <category term="centos postgres" scheme="http://yoursite.com/tags/centos-postgres/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos 常用命令集锦</title>
-    <link href="http://yoursite.com/2016/11/02/centos-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%9B%86%E9%94%A6/"/>
-    <id>http://yoursite.com/2016/11/02/centos-常用命令集锦/</id>
-    <published>2016-11-02T05:11:21.000Z</published>
-    <updated>2017-03-16T02:14:19.533Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Windows平台安装Xshell-5"><a href="#Windows平台安装Xshell-5" class="headerlink" title="Windows平台安装Xshell 5"></a>Windows平台安装Xshell 5</h2><blockquote>
-<ul>
-<li>配置访问centos的链接[<a href="https://github.com/ma6174/vim" target="_blank" rel="external">https://github.com/ma6174/vim</a>]</li>
-<li>安装vim编辑器: wget -qO- <a href="https://raw.github.com/ma6174/vim/master/setup.sh" target="_blank" rel="external">https://raw.github.com/ma6174/vim/master/setup.sh</a> | sh -x</li>
-</ul>
-</blockquote>
-<h2 id="Centos7常用命令"><a href="#Centos7常用命令" class="headerlink" title="Centos7常用命令"></a>Centos7常用命令</h2><h3 id="用户相关"><a href="#用户相关" class="headerlink" title="用户相关:"></a>用户相关:</h3><blockquote>
-<ul>
-<li>使用whoami命令查看所使用的登录名称</li>
-<li>删除用户: userdel username</li>
-<li>切换用户: su – username<br>[切换为username]</li>
-<li>用户配置文件存放路径:<br>/etc/group  文件是用户组的配置文件。<br>/etc/passwd 文件是用户的配置文件。</li>
-<li><p>修改系统语言为英文：<br>vim /etc/sysconfig/i18n<br>改为：LANG=”en_US.UTF-8”</p>
-</li>
-<li><p>修改centos系统语言为英文（7）<br>vi    /etc/locale.conf<br>改为：LANG=”en_US.UTF-8”</p>
-</li>
-</ul>
-<ul>
-<li>查看centos是32位还是64位系统：<br>sudo uname –m</li>
-</ul>
-</blockquote>
-<h3 id="网络相关："><a href="#网络相关：" class="headerlink" title="网络相关："></a>网络相关：</h3><blockquote>
-<ul>
-<li>查看网卡uuid: #nmcli con show</li>
-<li>重启网络: service network restart</li>
-<li>nmcli dev status</li>
-<li>添加默认网关路由: #route add default gw &lt;默认网关地址&gt;</li>
-<li>查看路由: route –n</li>
-<li>查看网关:netstat -rn</li>
-</ul>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Windows平台安装Xshell-5&quot;&gt;&lt;a href=&quot;#Windows平台安装Xshell-5&quot; class=&quot;headerlink&quot; title=&quot;Windows平台安装Xshell 5&quot;&gt;&lt;/a&gt;Windows平台安装Xshell 5&lt;/h2&gt;&lt;bloc
-    
-    </summary>
-    
-      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
-    
-    
-      <category term="centos linux" scheme="http://yoursite.com/tags/centos-linux/"/>
     
   </entry>
   
@@ -316,20 +296,6 @@
   </entry>
   
   <entry>
-    <title>Android 离线打包</title>
-    <link href="http://yoursite.com/2016/09/15/Android-%E7%A6%BB%E7%BA%BF%E6%89%93%E5%8C%85/"/>
-    <id>http://yoursite.com/2016/09/15/Android-离线打包/</id>
-    <published>2016-09-15T10:14:05.000Z</published>
-    <updated>2016-09-15T10:14:05.082Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>netbeans 常用快捷键</title>
     <link href="http://yoursite.com/2016/09/15/netbeans-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://yoursite.com/2016/09/15/netbeans-常用快捷键/</id>
@@ -363,76 +329,6 @@
     
     
       <category term="快捷键 Netbeans" scheme="http://yoursite.com/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE-Netbeans/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sprint boot 学习笔记</title>
-    <link href="http://yoursite.com/2016/09/15/Sprint-boot-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2016/09/15/Sprint-boot-学习笔记/</id>
-    <published>2016-09-15T10:11:02.000Z</published>
-    <updated>2016-09-15T10:11:02.033Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ant学习笔记</title>
-    <link href="http://yoursite.com/2016/09/15/ant%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2016/09/15/ant学习笔记/</id>
-    <published>2016-09-15T10:10:35.000Z</published>
-    <updated>2016-09-15T10:10:35.566Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>maven相关知识</title>
-    <link href="http://yoursite.com/2016/09/15/maven%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
-    <id>http://yoursite.com/2016/09/15/maven相关知识/</id>
-    <published>2016-09-15T10:10:14.000Z</published>
-    <updated>2016-09-15T10:10:14.140Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>postgresql</title>
-    <link href="http://yoursite.com/2016/09/15/postgresql/"/>
-    <id>http://yoursite.com/2016/09/15/postgresql/</id>
-    <published>2016-09-15T10:09:38.000Z</published>
-    <updated>2016-09-15T10:09:38.920Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>angularjs学习笔记</title>
-    <link href="http://yoursite.com/2016/09/15/angularjs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2016/09/15/angularjs学习笔记/</id>
-    <published>2016-09-15T10:07:52.000Z</published>
-    <updated>2016-09-15T10:07:52.656Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
@@ -635,20 +531,6 @@
     
     
       <category term="git命令" scheme="http://yoursite.com/tags/git%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo学习笔记</title>
-    <link href="http://yoursite.com/2016/09/15/hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2016/09/15/hexo学习笔记/</id>
-    <published>2016-09-15T06:54:23.000Z</published>
-    <updated>2016-09-15T06:54:23.773Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   

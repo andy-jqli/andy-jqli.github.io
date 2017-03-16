@@ -14,13 +14,13 @@
     <meta name="description" content="Windows平台安装Xshell 5
 
 配置访问centos的链接[https://github.com/ma6174/vim]
-安装vim编辑器: wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
+安装vim编辑器: `wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x’
 
 
 Centos7常用命令用户相关:
 
 使用whoami命令查看所使用的登录名称
-删除用户: userdel u">
+删除用户: userdel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos 常用命令集锦">
 <meta property="og:url" content="http://yoursite.com/2016/11/02/centos-常用命令集锦/index.html">
@@ -28,26 +28,26 @@ Centos7常用命令用户相关:
 <meta property="og:description" content="Windows平台安装Xshell 5
 
 配置访问centos的链接[https://github.com/ma6174/vim]
-安装vim编辑器: wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
+安装vim编辑器: `wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x’
 
 
 Centos7常用命令用户相关:
 
 使用whoami命令查看所使用的登录名称
-删除用户: userdel u">
-<meta property="og:updated_time" content="2017-03-16T02:14:19.533Z">
+删除用户: userdel">
+<meta property="og:updated_time" content="2017-03-16T10:10:55.757Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos 常用命令集锦">
 <meta name="twitter:description" content="Windows平台安装Xshell 5
 
 配置访问centos的链接[https://github.com/ma6174/vim]
-安装vim编辑器: wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
+安装vim编辑器: `wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x’
 
 
 Centos7常用命令用户相关:
 
 使用whoami命令查看所使用的登录名称
-删除用户: userdel u">
+删除用户: userdel">
 
     
     <link rel="alternative" href="/atom.xml" title="andy" type="application/atom+xml">
@@ -130,32 +130,32 @@ Centos7常用命令用户相关:
 		<h2 id="Windows平台安装Xshell-5"><a href="#Windows平台安装Xshell-5" class="headerlink" title="Windows平台安装Xshell 5"></a>Windows平台安装Xshell 5</h2><blockquote>
 <ul>
 <li>配置访问centos的链接[<a href="https://github.com/ma6174/vim" target="_blank" rel="external">https://github.com/ma6174/vim</a>]</li>
-<li>安装vim编辑器: wget -qO- <a href="https://raw.github.com/ma6174/vim/master/setup.sh" target="_blank" rel="external">https://raw.github.com/ma6174/vim/master/setup.sh</a> | sh -x</li>
+<li>安装vim编辑器: `wget -qO- <a href="https://raw.github.com/ma6174/vim/master/setup.sh" target="_blank" rel="external">https://raw.github.com/ma6174/vim/master/setup.sh</a> | sh -x’</li>
 </ul>
 </blockquote>
 <h2 id="Centos7常用命令"><a href="#Centos7常用命令" class="headerlink" title="Centos7常用命令"></a>Centos7常用命令</h2><h3 id="用户相关"><a href="#用户相关" class="headerlink" title="用户相关:"></a>用户相关:</h3><blockquote>
 <ul>
-<li>使用whoami命令查看所使用的登录名称</li>
-<li>删除用户: userdel username</li>
-<li>切换用户: su – username<br>[切换为username]</li>
+<li>使用<code>whoami</code>命令查看所使用的登录名称</li>
+<li>删除用户: <code>userdel username</code></li>
+<li>切换用户: <code>su – username</code><br>[切换为username]</li>
 <li>用户配置文件存放路径:<br>/etc/group  文件是用户组的配置文件。<br>/etc/passwd 文件是用户的配置文件。</li>
-<li><p>修改系统语言为英文：<br>vim /etc/sysconfig/i18n<br>改为：LANG=”en_US.UTF-8”</p>
+<li><p>修改系统语言为英文：<br><code>vim /etc/sysconfig/i18n</code><br>改为：LANG=”en_US.UTF-8”</p>
 </li>
-<li><p>修改centos系统语言为英文（7）<br>vi    /etc/locale.conf<br>改为：LANG=”en_US.UTF-8”</p>
+<li><p>修改centos系统语言为英文（7）<br><code>vi /etc/locale.conf</code><br>改为：LANG=”en_US.UTF-8”</p>
 </li>
 </ul>
 <ul>
-<li>查看centos是32位还是64位系统：<br>sudo uname –m</li>
+<li>查看centos是32位还是64位系统：<br><code>sudo uname –m</code></li>
 </ul>
 </blockquote>
 <h3 id="网络相关："><a href="#网络相关：" class="headerlink" title="网络相关："></a>网络相关：</h3><blockquote>
 <ul>
-<li>查看网卡uuid: #nmcli con show</li>
-<li>重启网络: service network restart</li>
-<li>nmcli dev status</li>
-<li>添加默认网关路由: #route add default gw &lt;默认网关地址&gt;</li>
-<li>查看路由: route –n</li>
-<li>查看网关:netstat -rn</li>
+<li>查看网卡uuid: <code>nmcli con show</code></li>
+<li>重启网络: <code>service network restart</code></li>
+<li><code>nmcli dev status</code></li>
+<li>添加默认网关路由: <code>route add default gw &lt;默认网关地址&gt;</code></li>
+<li>查看路由: <code>route –n</code></li>
+<li>查看网关:<code>netstat -rn</code></li>
 </ul>
 </blockquote>
   
@@ -193,19 +193,11 @@ Centos7常用命令用户相关:
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/11/02/centos7下安装postgres/" title="centos7下安装postgres">
-  <strong>上一篇：</strong><br/>
-  <span>
-  centos7下安装postgres</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/09/22/DB2-errorCode/"  title="DB2 errorCode">
+<a href="/2016/11/02/centos7下安装jdk/"  title="centos7下安装jdk">
  <strong>下一篇：</strong><br/> 
- <span>DB2 errorCode
+ <span>centos7下安装jdk
 </span>
 </a>
 </div>
@@ -270,11 +262,11 @@ Centos7常用命令用户相关:
 			
 		
 			
-				<li><a href="/tags/app离线缓存-Web-SQL/" title="app离线缓存 Web-SQL">app离线缓存 Web-SQL<sup>1</sup></a></li>
+				<li><a href="/tags/centos-linux/" title="centos linux">centos linux<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/centos-linux/" title="centos linux">centos linux<sup>1</sup></a></li>
+				<li><a href="/tags/app离线缓存-Web-SQL/" title="app离线缓存 Web-SQL">app离线缓存 Web-SQL<sup>1</sup></a></li>
 			
 		
 			
