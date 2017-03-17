@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="postgresql dblink," />
 
 
 
@@ -89,12 +89,37 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="andy">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="准备工作:创建dblink扩展：create extension dblink;
+
+
+dblink_connect
+
+
+这个命令主要作用是建立一个到远程数据库的连接，比如
+select dblink_connect(‘myconn’, ‘host=XXX.XXX.XXX.XXX port=XX dbname=postgres user=myname password=mypassword’);my">
+<meta property="og:type" content="article">
+<meta property="og:title" content="postgres--dblink">
+<meta property="og:url" content="http://yoursite.com/postgres-dblink.html">
 <meta property="og:site_name" content="andy">
+<meta property="og:description" content="准备工作:创建dblink扩展：create extension dblink;
+
+
+dblink_connect
+
+
+这个命令主要作用是建立一个到远程数据库的连接，比如
+select dblink_connect(‘myconn’, ‘host=XXX.XXX.XXX.XXX port=XX dbname=postgres user=myname password=mypassword’);my">
+<meta property="og:updated_time" content="2016-09-16T03:26:25.524Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="andy">
+<meta name="twitter:title" content="postgres--dblink">
+<meta name="twitter:description" content="准备工作:创建dblink扩展：create extension dblink;
+
+
+dblink_connect
+
+
+这个命令主要作用是建立一个到远程数据库的连接，比如
+select dblink_connect(‘myconn’, ‘host=XXX.XXX.XXX.XXX port=XX dbname=postgres user=myname password=mypassword’);my">
 
 
 
@@ -122,7 +147,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/"/>
+  <link rel="canonical" href="http://yoursite.com/postgres-dblink.html"/>
 
 
 
@@ -131,7 +156,7 @@
 
 
 
-  <title> 归档 | andy </title>
+  <title> postgres--dblink | andy </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +181,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -240,399 +265,242 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 10 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/centos7下安装jdk.html" itemprop="url">
-              
-                <span itemprop="name">centos7下安装jdk</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-02T13:11:21+08:00"
-              content="2016-11-02" >
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/centos-常用命令集锦.html" itemprop="url">
-              
-                <span itemprop="name">centos 常用命令集锦</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-02T13:11:21+08:00"
-              content="2016-11-02" >
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/centos7下安装postgres.html" itemprop="url">
-              
-                <span itemprop="name">centos7下安装postgres</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-02T13:11:21+08:00"
-              content="2016-11-02" >
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/DB2-errorCode.html" itemprop="url">
-              
-                <span itemprop="name">DB2 errorCode</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-22T18:34:04+08:00"
-              content="2016-09-22" >
-          09-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/postgres-dblink.html" itemprop="url">
-              
-                <span itemprop="name">postgres--dblink</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-15T18:14:43+08:00"
-              content="2016-09-15" >
-          09-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/netbeans-常用快捷键.html" itemprop="url">
-              
-                <span itemprop="name">netbeans 常用快捷键</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-15T18:13:36+08:00"
-              content="2016-09-15" >
-          09-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/mui学习笔记.html" itemprop="url">
-              
-                <span itemprop="name">mui学习笔记</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-15T15:41:37+08:00"
-              content="2016-09-15" >
-          09-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/git命令学习笔记.html" itemprop="url">
-              
-                <span itemprop="name">git命令学习笔记</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-15T15:34:04+08:00"
-              content="2016-09-15" >
-          09-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/app离线本地存储方案--Web SQL.html" itemprop="url">
-              
-                <span itemprop="name">app离线本地存储方案--Web SQL</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-15T14:26:09+08:00"
-              content="2016-09-15" >
-          09-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/app离线本地存储方案--indexedDB.html" itemprop="url">
-              
-                <span itemprop="name">app离线本地存储方案--indexedDB</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-15T09:37:00+08:00"
-              content="2016-09-15" >
-          09-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/postgres-dblink.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="andy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="andy">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                postgres--dblink
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-15T18:14:43+08:00">
+                2016-09-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/postgres-dblink.html" class="leancloud_visitors" data-flag-title="postgres--dblink">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>准备工作:创建dblink扩展：create extension dblink;</p>
+<blockquote>
+<ul>
+<li><strong>dblink_connect</strong></li>
+</ul>
+</blockquote>
+<p>这个命令主要作用是建立一个到远程数据库的连接，比如</p>
+<p>select dblink_connect(‘myconn’, ‘host=XXX.XXX.XXX.XXX port=XX dbname=postgres user=myname password=mypassword’);<br>myconn表示连接名称，可以不写，不过建议还是写下连接名称。</p>
+<blockquote>
+<ul>
+<li><strong>dblink_disconnect</strong></li>
+</ul>
+</blockquote>
+<p>断开远程数据库连接，比如</p>
+<p>select dblink_disconnect(‘myconn’) ;</p>
+<blockquote>
+<ul>
+<li><strong>dblink</strong></li>
+</ul>
+</blockquote>
+<p>这个命令意思就是执行一个远程的查询。如果远程连接成功，那么就可以在本地操作远程数据库了。</p>
+<p>select <em> from dblink(‘myconn’,’select </em> from mytable’) as t(a int, b text, c text[]) </p>
+<p>（注:远程数据库的表结构发生改变时，则需要重新执行此操作）</p>
+<blockquote>
+<ul>
+<li><strong>dblink_error_message</strong></li>
+</ul>
+</blockquote>
+<p>得到最后出现错误的信息提示。select dblink_error_message(‘myconn’);</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="andy WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="图片链接或图片相对路径" alt="andy Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/postgresql-dblink/" rel="tag"># postgresql dblink</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/netbeans-常用快捷键.html" rel="next" title="netbeans 常用快捷键">
+                <i class="fa fa-chevron-left"></i> netbeans 常用快捷键
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/DB2-errorCode.html" rel="prev" title="DB2 errorCode">
+                DB2 errorCode <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -640,6 +508,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
 
         </div>
         
@@ -834,11 +708,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
@@ -872,6 +744,10 @@
   
     
 
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2127538"></script>
+      <!-- UY END -->
     
   
 
