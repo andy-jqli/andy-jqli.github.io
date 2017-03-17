@@ -69,41 +69,6 @@
   </entry>
   
   <entry>
-    <title>centos7下安装jdk</title>
-    <link href="http://yoursite.com/2016/11/02/centos7%E4%B8%8B%E5%AE%89%E8%A3%85jdk/"/>
-    <id>http://yoursite.com/2016/11/02/centos7下安装jdk/</id>
-    <published>2016-11-02T05:11:21.000Z</published>
-    <updated>2017-03-16T09:53:04.964Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Centos7下安装jdk"><a href="#Centos7下安装jdk" class="headerlink" title="Centos7下安装jdk"></a>Centos7下安装jdk</h2><blockquote>
-<ul>
-<li>下载jdk8<br>登录网址：<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a><br>选择对应jdk版本下载。（可在Windows下下载完成后，通过文件夹共享到Linux上）</li>
-<li>登录Linux，切换到root用户<br><code>su root</code> 获取root用户权限，当前工作目录不变(需要root密码)<br>或sudo -i 不需要root密码直接切换成root（需要当前用户密码）</li>
-<li>在usr目录下建立java安装目录<br><code>cd /usr</code>                         <code>mkdir java</code></li>
-<li>将jdk-8u60-linux-x64.tar.gz拷贝到java目录下<br><code>cp /mnt/hgfs/linux/jdk-8u60-linux-x64.tar.gz /usr/java/</code></li>
-<li>解压jdk到当前目录<br><code>tar -zxvf jdk-8u60-linux-x64.tar.gz</code>          得到文件夹 jdk1.8.0_60<br>*安装完毕为他建立一个链接以节省目录长度<br><code>ln -s /usr/java/jdk1.8.0_60/ /usr/jdk</code></li>
-<li>编辑配置文件，配置环境变量<br>vim /etc/profile              添加如下内容：JAVA_HOME根据实际目录来<br>JAVA_HOME=/usr/java/jdk1.8.0_60<br>CLASSPATH=$JAVA_HOME/lib/<br>PATH=$PATH:$JAVA_HOME/bin<br>export PATH JAVA_HOME CLASSPATH<br>*重启机器或执行命令 ：<code>source /etc/profile</code><br><code>sudo shutdown -r now</code></li>
-<li>查看安装情况<br><code>java -version</code><br>java version “1.8.0_60”<br>Java(TM) SE Runtime Environment (build 1.8.0_60-b27)<br>Java HotSpot(TM) Client VM (build 25.60-b23, mixed mode)<br>可能出现的错误信息：<br>bash: ./java: cannot execute binary file<br>出现这个错误的原因可能是在32位的操作系统上安装了64位的jdk，<br>查看jdk版本和Linux版本位数是否一致。<br>查看你安装的Ubuntu是32位还是64位系统：<br><code>sudo uname --m</code><br>i686 //表示是32位<br>x86_64 // 表示是64位</li>
-</ul>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Centos7下安装jdk&quot;&gt;&lt;a href=&quot;#Centos7下安装jdk&quot; class=&quot;headerlink&quot; title=&quot;Centos7下安装jdk&quot;&gt;&lt;/a&gt;Centos7下安装jdk&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;下载jdk8&lt;
-    
-    </summary>
-    
-      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
-    
-    
-      <category term="centos jdk" scheme="http://yoursite.com/tags/centos-jdk/"/>
-    
-  </entry>
-  
-  <entry>
     <title>centos7下安装postgres</title>
     <link href="http://yoursite.com/2016/11/02/centos7%E4%B8%8B%E5%AE%89%E8%A3%85postgres/"/>
     <id>http://yoursite.com/2016/11/02/centos7下安装postgres/</id>
@@ -205,6 +170,41 @@
     
     
       <category term="centos postgres" scheme="http://yoursite.com/tags/centos-postgres/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos7下安装jdk</title>
+    <link href="http://yoursite.com/2016/11/02/centos7%E4%B8%8B%E5%AE%89%E8%A3%85jdk/"/>
+    <id>http://yoursite.com/2016/11/02/centos7下安装jdk/</id>
+    <published>2016-11-02T05:11:21.000Z</published>
+    <updated>2017-03-16T09:53:04.964Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Centos7下安装jdk"><a href="#Centos7下安装jdk" class="headerlink" title="Centos7下安装jdk"></a>Centos7下安装jdk</h2><blockquote>
+<ul>
+<li>下载jdk8<br>登录网址：<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a><br>选择对应jdk版本下载。（可在Windows下下载完成后，通过文件夹共享到Linux上）</li>
+<li>登录Linux，切换到root用户<br><code>su root</code> 获取root用户权限，当前工作目录不变(需要root密码)<br>或sudo -i 不需要root密码直接切换成root（需要当前用户密码）</li>
+<li>在usr目录下建立java安装目录<br><code>cd /usr</code>                         <code>mkdir java</code></li>
+<li>将jdk-8u60-linux-x64.tar.gz拷贝到java目录下<br><code>cp /mnt/hgfs/linux/jdk-8u60-linux-x64.tar.gz /usr/java/</code></li>
+<li>解压jdk到当前目录<br><code>tar -zxvf jdk-8u60-linux-x64.tar.gz</code>          得到文件夹 jdk1.8.0_60<br>*安装完毕为他建立一个链接以节省目录长度<br><code>ln -s /usr/java/jdk1.8.0_60/ /usr/jdk</code></li>
+<li>编辑配置文件，配置环境变量<br>vim /etc/profile              添加如下内容：JAVA_HOME根据实际目录来<br>JAVA_HOME=/usr/java/jdk1.8.0_60<br>CLASSPATH=$JAVA_HOME/lib/<br>PATH=$PATH:$JAVA_HOME/bin<br>export PATH JAVA_HOME CLASSPATH<br>*重启机器或执行命令 ：<code>source /etc/profile</code><br><code>sudo shutdown -r now</code></li>
+<li>查看安装情况<br><code>java -version</code><br>java version “1.8.0_60”<br>Java(TM) SE Runtime Environment (build 1.8.0_60-b27)<br>Java HotSpot(TM) Client VM (build 25.60-b23, mixed mode)<br>可能出现的错误信息：<br>bash: ./java: cannot execute binary file<br>出现这个错误的原因可能是在32位的操作系统上安装了64位的jdk，<br>查看jdk版本和Linux版本位数是否一致。<br>查看你安装的Ubuntu是32位还是64位系统：<br><code>sudo uname --m</code><br>i686 //表示是32位<br>x86_64 // 表示是64位</li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Centos7下安装jdk&quot;&gt;&lt;a href=&quot;#Centos7下安装jdk&quot; class=&quot;headerlink&quot; title=&quot;Centos7下安装jdk&quot;&gt;&lt;/a&gt;Centos7下安装jdk&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;下载jdk8&lt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="centos jdk" scheme="http://yoursite.com/tags/centos-jdk/"/>
     
   </entry>
   
