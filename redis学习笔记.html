@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="mui," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -89,16 +89,16 @@
 
 
 
-<meta name="description" content="input框自动获得焦点，同时加载软键盘1234567891011121314151617181920212223242526272829var nativeWebview, imm, InputMethodManager;    var initNativeObjects = function() &amp;#123;        if (mui.os.android) &amp;#123;">
+<meta name="description" content="##">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mui学习笔记">
-<meta property="og:url" content="http://yoursite.com/2016/09/15/mui学习笔记/index.html">
+<meta property="og:title" content="andy">
+<meta property="og:url" content="http://yoursite.com/redis学习笔记.html">
 <meta property="og:site_name" content="andy">
-<meta property="og:description" content="input框自动获得焦点，同时加载软键盘1234567891011121314151617181920212223242526272829var nativeWebview, imm, InputMethodManager;    var initNativeObjects = function() &amp;#123;        if (mui.os.android) &amp;#123;">
-<meta property="og:updated_time" content="2016-09-16T08:31:33.653Z">
+<meta property="og:description" content="##">
+<meta property="og:updated_time" content="2017-04-06T10:37:05.384Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mui学习笔记">
-<meta name="twitter:description" content="input框自动获得焦点，同时加载软键盘1234567891011121314151617181920212223242526272829var nativeWebview, imm, InputMethodManager;    var initNativeObjects = function() &amp;#123;        if (mui.os.android) &amp;#123;">
+<meta name="twitter:title" content="andy">
+<meta name="twitter:description" content="##">
 
 
 
@@ -126,13 +126,16 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/09/15/mui学习笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/redis学习笔记.html"/>
 
 
 
 
 
-  <title> mui学习笔记 | andy </title>
+
+
+
+  <title>  | andy </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +254,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/15/mui学习笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/redis学习笔记.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="andy">
@@ -272,7 +275,7 @@
             
             
               
-                mui学习笔记
+                
               
             
           </h1>
@@ -287,8 +290,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-15T15:41:37+08:00">
-                2016-09-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-06T18:35:22+08:00">
+                2017-04-06
               </time>
             
 
@@ -298,28 +301,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端技术/" itemprop="url" rel="index">
-                    <span itemprop="name">前端技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -327,7 +308,7 @@
 
           
           
-             <span id="/2016/09/15/mui学习笔记/" class="leancloud_visitors" data-flag-title="mui学习笔记">
+             <span id="/redis学习笔记.html" class="leancloud_visitors" data-flag-title="">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -356,13 +337,7 @@
       
 
       
-        <h2 id="input框自动获得焦点，同时加载软键盘"><a href="#input框自动获得焦点，同时加载软键盘" class="headerlink" title="input框自动获得焦点，同时加载软键盘"></a>input框自动获得焦点，同时加载软键盘</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> nativeWebview, imm, InputMethodManager;</div><div class="line">    <span class="keyword">var</span> initNativeObjects = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (mui.os.android) &#123;</div><div class="line">            <span class="keyword">var</span> main = plus.android.runtimeMainActivity();</div><div class="line">            <span class="keyword">var</span> Context = plus.android.importClass(<span class="string">"android.content.Context"</span>);</div><div class="line">            InputMethodManager = plus.android.importClass(<span class="string">"android.view.inputmethod.InputMethodManager"</span>);</div><div class="line">            imm = main.getSystemService(Context.INPUT_METHOD_SERVICE);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            nativeWebview = plus.webview.currentWebview().nativeInstanceObject();</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> showSoftInput = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (mui.os.android) &#123;</div><div class="line">            imm.toggleSoftInput(<span class="number">0</span>, InputMethodManager.SHOW_FORCED);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            nativeWebview.plusCallMethod(&#123;</div><div class="line">                <span class="string">"setKeyboardDisplayRequiresUserAction"</span>: <span class="literal">false</span></div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">           <span class="comment">//此处可写具体逻辑设置获取焦点的input</span></div><div class="line">           <span class="keyword">var</span> inputElem = <span class="built_in">document</span>.querySelector(<span class="string">'input'</span>);</div><div class="line">                  inputElem.focus(); </div><div class="line">        &#125;, <span class="number">200</span>);</div><div class="line">    &#125;;</div><div class="line">    mui.plusReady(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        initNativeObjects();</div><div class="line">        showSoftInput();</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> openSoftKeyboard = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="keyword">if</span>(mui.os.ios)&#123;</div><div class="line">        <span class="keyword">var</span> webView = plus.webview.currentWebview().nativeInstanceObject();</div><div class="line">        webView.plusCallMethod(&#123;</div><div class="line">                <span class="string">"setKeyboardDisplayRequiresUserAction"</span>: <span class="literal">false</span>&#125;);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">var</span> webview = plus.android.currentWebview();</div><div class="line">        plus.android.importClass(webview);</div><div class="line">        webview.requestFocus();</div><div class="line">        <span class="keyword">var</span> Context = plus.android.importClass(<span class="string">"android.content.Context"</span>);</div><div class="line">        <span class="keyword">var</span> InputMethodManager = plus.android.importClass(<span class="string">"android.view.inputmethod.InputMethodManager"</span>);</div><div class="line">        <span class="keyword">var</span> main = plus.android.runtimeMainActivity();</div><div class="line">        <span class="keyword">var</span> imm = main.getSystemService(Context.INPUT_METHOD_SERVICE);</div><div class="line">        imm.toggleSoftInput(<span class="number">0</span>, InputMethodManager.SHOW_FORCED);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>//页面隐藏事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">plus.webview.currentWebview().addEventListener(<span class="string">"hide"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"search-text"</span>).value=<span class="string">""</span>;</div><div class="line">    <span class="comment">//搜索框取消焦点，关闭软键盘</span></div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"search-text"</span>).blur();</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>//页面显示事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">plus.webview.currentWebview().addEventListener(<span class="string">"show"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">     <span class="comment">//自动打开软键盘，搜索框获取焦点</span></div><div class="line">     openSoftKeyboard();</div><div class="line">     <span class="built_in">document</span>.getElementById(<span class="string">"search-text"</span>).focus();</div><div class="line">  &#125;, <span class="number">300</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>(参考:<a href="http://ask.dcloud.net.cn/question/2324" target="_blank" rel="external">http://ask.dcloud.net.cn/question/2324</a>      <a href="http://ask.dcloud.net.cn/article/513" target="_blank" rel="external">http://ask.dcloud.net.cn/article/513</a>)</p>
-<h2 id="点击返回键进入后台-等同于home键操作-plusReady添加："><a href="#点击返回键进入后台-等同于home键操作-plusReady添加：" class="headerlink" title="点击返回键进入后台(等同于home键操作):plusReady添加："></a>点击返回键进入后台(等同于home键操作):plusReady添加：</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> main = plus.android.runtimeMainActivity();</div><div class="line">    main.moveTaskToBack(<span class="literal">false</span>);</div></pre></td></tr></table></figure>
-<h2 id="重置上拉加载控件"><a href="#重置上拉加载控件" class="headerlink" title="重置上拉加载控件"></a>重置上拉加载控件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mui(<span class="string">'.mui-slider-group'</span>).pullRefresh().refresh(<span class="literal">true</span>);</div></pre></td></tr></table></figure>
+        <p>## </p>
 
       
     </div>
@@ -411,12 +386,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/mui/" rel="tag"># mui</a>
-          
-        </div>
-      
 
       
         
@@ -426,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/15/git命令学习笔记/" rel="next" title="git命令学习笔记">
-                <i class="fa fa-chevron-left"></i> git命令学习笔记
+              <a href="/centos7下安装postgres.html" rel="next" title="centos7下安装postgres">
+                <i class="fa fa-chevron-left"></i> centos7下安装postgres
               </a>
             
           </div>
@@ -436,8 +405,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/15/netbeans-常用快捷键/" rel="prev" title="netbeans 常用快捷键">
-                netbeans 常用快捷键 <i class="fa fa-chevron-right"></i>
+              <a href="/jardesc详解.html" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -487,17 +456,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -512,7 +472,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -544,7 +504,7 @@
 
         
           <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
+            <a href="/atom.xml" rel="alternate" rel="external nofollow">
               <i class="fa fa-rss"></i>
               RSS
             </a>
@@ -566,22 +526,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#input框自动获得焦点，同时加载软键盘"><span class="nav-number">1.</span> <span class="nav-text">input框自动获得焦点，同时加载软键盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击返回键进入后台-等同于home键操作-plusReady添加："><span class="nav-number">2.</span> <span class="nav-text">点击返回键进入后台(等同于home键操作):plusReady添加：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重置上拉加载控件"><span class="nav-number">3.</span> <span class="nav-text">重置上拉加载控件</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -608,12 +552,12 @@
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
     NexT.Mist
   </a>
 </div>
